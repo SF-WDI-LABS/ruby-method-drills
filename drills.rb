@@ -18,10 +18,9 @@
 # spell_out
 # seperate
 # croon
-# palindrome_word
-# palindrome_sentence
+# palindrome_word?
+# palindrome_sentence?
 # is_vowel
-# terminal_punctuation
 # add_period
 
 ###########################
