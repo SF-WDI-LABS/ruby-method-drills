@@ -52,7 +52,7 @@ describe "#yell" do
 end
 
 describe "#to_telegram" do
-  it "replaces periods with the word 'STOP'" do
+  it "replaces periods with ' STOP'" do
     expect( to_telegram("hello.") ).to eq "hello STOP"
     expect( to_telegram("Hello. It's me.") ).to eq "Hello STOP It's me STOP"
   end

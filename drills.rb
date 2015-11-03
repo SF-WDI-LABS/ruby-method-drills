@@ -7,6 +7,7 @@
 # how_many_args
 # find_answer
 
+
 ##############################
 #### MANIPULATING STRINGS ####
 ##############################
@@ -23,6 +24,7 @@
 # is_vowel
 # add_period
 
+
 ###########################
 #### LOOPS & ITERATORS ####
 ###########################
@@ -36,6 +38,15 @@
 # select_every_even
 # select_every_odd
 # select_every_n
+
+
+##############################
+#### MANIPULATING NUMBERS ####
+##############################
+#is_integer?
+#is_prime?
+#primes_less_than
+#iterative_factorial
 
 
 ##############################
