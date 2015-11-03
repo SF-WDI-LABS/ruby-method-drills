@@ -2,6 +2,16 @@
 #### MANIPULATING NUMBERS ####
 ##############################
 
+
+def count_to(n)
+  n = n.to_i
+  if n >= 0
+    (0..n).to_a
+  else
+    0.downto(n).to_a
+  end
+end
+
 def is_integer?(num)
   num.class == Fixnum || num.class == Bignum || 
     ( num.is_a?(Float) && !num.nan? && num.to_i == num )

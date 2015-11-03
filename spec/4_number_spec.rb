@@ -1,11 +1,26 @@
 # THIS FILE PERFORMS RSPEC TESTS ON `drills.rb`
 # TO RUN YOUR TESTS TYPE: `rspec spec/number_spec.rb`
 
-require "./drills.rb" 
+# require "./solutions/numbers.rb"   # use this line to see passing tests
+require "./drills.rb"              # use this line to test your code
+
 
 ##############################
 #### MANIPULATING NUMBERS ####
 ##############################
+
+describe "#count_to" do
+  it "returns an array containing every integer from 0 to n" do
+    expect( count_to(0) ).to eq [0]
+    expect( count_to(2) ).to eq [0,1,2]
+    expect( count_to(-3) ).to eq [0,-1,-2,-3]
+  end
+
+  it "rounds off decimals" do
+    expect( count_to(2.8) ).to eq [0,1,2]
+    expect( count_to(-2.8) ).to eq [0,-1,-2]
+  end
+end
 
 describe "#is_integer?" do
   it "returns true for Fixnums and Bignums (whole number or 'integer' types)" do

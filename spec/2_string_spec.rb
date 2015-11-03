@@ -1,7 +1,8 @@
 # THIS FILE PERFORMS RSPEC TESTS ON `drills.rb`
 # TO RUN YOUR TESTS TYPE: `rspec spec/2_string_spec.rb`
 
-require "./drills.rb"
+# require "./solutions/strings.rb"   # use this line to see passing tests
+require "./drills.rb"              # use this line to test your code
 
 ##############################
 #### MANIPULATING STRINGS ####
@@ -9,15 +10,13 @@ require "./drills.rb"
 
 describe "#first_char" do
   it "returns the first letter of the word" do
-    expect( first_char("ilias") ).to eq "i"
-    expect( first_char("justin") ).to eq "j"
-    expect( first_char("nathan") ).to eq "n"
+    expect( first_char("alex") ).to eq "a"
+    expect( first_char("bedford") ).to eq "b"
   end
 
   it "lowercases the first letter of the word" do
-    expect( first_char("Ilias") ).to eq "i"
-    expect( first_char("Justin") ).to eq "j"
-    expect( first_char("Nathan") ).to eq "n"
+    expect( first_char("Ben") ).to eq "b"
+    expect( first_char("Brianna") ).to eq "b"
   end
 end
 

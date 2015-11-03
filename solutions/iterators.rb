@@ -13,10 +13,6 @@ def count_spaces(str)
   count
 end
 
-def count_to(n)
-  Array(0..n.abs)
-end
-
 def string_lengths(list)
   list.map {|str| str.length }
 end
