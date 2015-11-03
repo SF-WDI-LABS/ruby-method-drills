@@ -1,10 +1,10 @@
 # THIS FILE PERFORMS RSPEC TESTS ON `drills.rb`
-# TO RUN YOUR TESTS TYPE: `rspec spec/4_object_spec.rb`
+# TO RUN YOUR TESTS TYPE: `rspec spec/4_hash_spec.rb`
 
 require "./drills.rb"
 
 ##############################
-#### MANIPULATING OBJECTS ####
+#### MANIPULATING HASHES ####
 ##############################
 
 describe "#character_count" do
