@@ -16,7 +16,7 @@ describe "#say_hello" do
 end
 
 describe "#echo" do
-  it "echoes the input string" do
+  it "returns the input string" do
     expect( echo("hi") ).to eq "hi"
     expect( echo("hey") ).to eq "hey"
   end

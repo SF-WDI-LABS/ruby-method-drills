@@ -5,7 +5,7 @@
   # returns 'hello'
 
 #echo
-  # echoes the input string
+  # returns the input string
 
 #get_fruit
   # returns the fruit that corresponds to the given id
