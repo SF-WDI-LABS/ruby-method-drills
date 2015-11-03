@@ -26,15 +26,13 @@ def is_prime?(num)
   else 
     # this could be a prime! loop through and check divisibility
     (2..(num-1)).each do |n|
-      if num % n == 0
+      if num % n == 0 # it's not prime
         return false  # break the loop early
       end
     end
     true
   end
 end
-
-
 
 def primes_less_than(num)
   primes = []
@@ -59,7 +57,8 @@ def iterative_factorial(num)
 end
 
 # ruby's shorthand way with `reduce` (see also: `inject`)
-# same logic as above, just shorter 
+# nearly same logic as above, but shorter 
+# *and* accepts non-integer decimals (not desired behavior)
 # def iterative_factorial(num)
 #   (1..num).reduce(1, :*)
 # end

@@ -13,6 +13,9 @@ describe "#count_to" do
   it "returns an array containing every integer from 0 to n" do
     expect( count_to(0) ).to eq [0]
     expect( count_to(2) ).to eq [0,1,2]
+  end
+
+  it "counts down for negative numbers" do
     expect( count_to(-3) ).to eq [0,-1,-2,-3]
   end
 
