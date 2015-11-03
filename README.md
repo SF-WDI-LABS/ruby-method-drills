@@ -77,6 +77,8 @@ When in doubt, test your code in the ruby REPL (`irb`, interactive ruby):
 
 (This is similar to running the node repl by typing `node`).
 
+When you want to quit `irb`, enter `quit`.
+
 Inside `irb` you can "hang a dot" and hit `tab` twice to see available methods:
 
 ``` ruby
