@@ -3,8 +3,11 @@
 Can you write code in `drills.rb` to pass the tests in the `spec` folder?
 
 ### Setup
+
+Fork this repo on GitHub.
+
 ``` bash
-git clone THIS_REPO.git
+git clone YOUR_FORK_CLONE_URL.git
 cd ruby_method_drills
 ```
 
