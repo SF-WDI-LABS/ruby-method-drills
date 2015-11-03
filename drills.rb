@@ -7,11 +7,6 @@
 #echo
   # returns the input string
 
-#get_fruit
-  # returns the fruit that corresponds to the given id
-  # does not raise an error when the id argument is missing
-  # defaults to 'apple' when no id argument is supplied
-
 #how_many_args
   # accepts any number of arguments without complaint
   # returns the total number of arguments passed to the function

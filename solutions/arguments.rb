@@ -10,10 +10,6 @@ def echo(input)
   input
 end
 
-def get_fruit(id=0)
-  ["apple", "pear"][id]
-end
-
 def how_many_args(*args)
   args.count
 end

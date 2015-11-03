@@ -22,21 +22,6 @@ describe "#echo" do
   end
 end
 
-describe "#get_fruit" do
-  it "returns the fruit that corresponds to the given id" do
-    expect( get_fruit(0) ).to eq "apple"
-    expect( get_fruit(1) ).to eq "pear"
-  end
-
-  it "does not raise an error when the id argument is missing" do
-    expect { get_fruit }.not_to raise_error
-  end
-
-  it "defaults to 'apple' when no id argument is supplied" do
-    expect( get_fruit ).to eq "apple"
-  end
-end
-
 describe "#how_many_args" do
   it "accepts any number of arguments without complaint" do
     expect { how_many_args(1) }.not_to raise_error
