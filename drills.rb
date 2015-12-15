@@ -7,6 +7,10 @@
 #echo
   # returns the input string
 
+#eddie_izzards_height
+  # calculates Eddie Izzards height (67in)
+  # and takes into account the height of his heel (default: 0in)
+
 #how_many_args
   # accepts any number of arguments without complaint
   # returns the total number of arguments passed to the function

@@ -22,6 +22,18 @@ describe "#echo" do
   end
 end
 
+describe "#eddie_izzards_height" do
+  it "calculates Eddie Izzards height in heels" do
+    expect( eddie_izzards_height(heel_height=0) ).to eq 67
+    expect( eddie_izzards_height(heel_height=4) ).to eq 71
+  end
+
+  it "defaults to a heel_height of 0 when no heel_height argument is explicitly provided" do
+    expect { eddie_izzards_height() }.not_to raise_error
+    expect( eddie_izzards_height ).to eq 67
+  end
+end
+
 describe "#how_many_args" do
   it "accepts any number of arguments without complaint" do
     expect { how_many_args(1) }.not_to raise_error
