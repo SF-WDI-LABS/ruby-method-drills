@@ -3,8 +3,11 @@
 Can you write code in `drills.rb` to pass the tests in the `spec` folder?
 
 ### Setup
+
+Fork this repo on GitHub.
+
 ``` bash
-git clone THIS_REPO.git
+git clone YOUR_FORK_CLONE_URL.git
 cd ruby_method_drills
 ```
 
@@ -76,6 +79,8 @@ When in doubt, test your code in the ruby REPL (`irb`, interactive ruby):
 ```
 
 (This is similar to running the node repl by typing `node`).
+
+When you want to quit `irb`, enter `quit`.
 
 Inside `irb` you can "hang a dot" and hit `tab` twice to see available methods:
 

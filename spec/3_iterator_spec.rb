@@ -1,7 +1,9 @@
 # THIS FILE PERFORMS RSPEC TESTS ON `drills.rb`
 # TO RUN YOUR TESTS TYPE: `rspec spec/3_iterator_spec.rb`
 
-require "./drills.rb"
+# require "./solutions/iterators.rb"   # use this line to see passing tests
+require "./drills.rb"              # use this line to test your code
+
 
 ###########################
 #### LOOPS & ITERATORS ####
@@ -9,28 +11,12 @@ require "./drills.rb"
 
 describe "#count_spaces" do
   it "counts the spaces in a string" do
-    space = " "
+    space = "\s"
+    tab = "\t"
     expect( count_spaces(space*1) ).to eq 1
-    expect( count_spaces(space*2) ).to eq 2
-    expect( count_spaces(space*10) ).to eq 10
+    expect( count_spaces(tab+space*10+tab) ).to eq 10
     expect( count_spaces("") ).to eq 0
     expect( count_spaces(" | | ") ).to eq 3
-  end
-end
-
-describe "#count_to" do
-  it "returns a list of every interger from 0 to n" do
-    expect( count_to(0) ).to eq [0]
-    expect( count_to(2) ).to eq [0,1,2]
-    expect( count_to(3) ).to eq [0,1,2,3]
-  end
-
-  it "uses the absolute value of n" do
-    expect( count_to(-3) ).to eq [0,1,2,3]
-  end
-
-  it "rounds down" do
-    expect( count_to(3.9) ).to eq [0,1,2,3]
   end
 end
 

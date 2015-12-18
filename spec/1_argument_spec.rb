@@ -1,7 +1,9 @@
 # THIS FILE PERFORMS RSPEC TESTS ON `drills.rb`
 # TO RUN YOUR TESTS TYPE: `rspec spec/1_argument_spec.rb`
 
-require "./drills.rb"
+# require "./solutions/arguments.rb"   # use this line to see passing tests
+require "./drills.rb"              # use this line to test your code
+
 
 #########################
 #### USING ARGUMENTS ####
@@ -14,24 +16,21 @@ describe "#say_hello" do
 end
 
 describe "#echo" do
-  it "echoes the input string" do
+  it "returns the input string" do
     expect( echo("hi") ).to eq "hi"
     expect( echo("hey") ).to eq "hey"
   end
 end
 
-describe "#get_fruit" do
-  it "returns the fruit that corresponds to the given id" do
-    expect( get_fruit(0) ).to eq "apple"
-    expect( get_fruit(1) ).to eq "pear"
+describe "#eddie_izzards_height" do
+  it "calculates Eddie Izzards height in heels" do
+    expect( eddie_izzards_height(heel_height=0) ).to eq 67
+    expect( eddie_izzards_height(heel_height=4) ).to eq 71
   end
 
-  it "does not raise an error when the id argument is missing" do
-    expect { get_fruit }.not_to raise_error
-  end
-
-  it "defaults to 'apple' when no id argument is supplied" do
-    expect( get_fruit ).to eq "apple"
+  it "defaults to a heel_height of 0 when no heel_height argument is explicitly provided" do
+    expect { eddie_izzards_height() }.not_to raise_error
+    expect( eddie_izzards_height ).to eq 67
   end
 end
 
