@@ -44,3 +44,9 @@ end
 def select_every_n(list, interval=1)
   list.select.with_index {|item, index| item if index%interval == 0 }
 end
+
+def compile_agenda(agenda_items, order="DESC", bullet="*")
+  sorted_agenda_items = agenda_items.sort_by {|o| o[:priority] }
+  sorted_agenda_items.reverse! if order == "ASC"
+  sorted_agenda_items.map {|o| "#{bullet} #{o[:title]}"  }.join("\n")
+end

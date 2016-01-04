@@ -113,3 +113,41 @@ describe "#select_every_n" do
     expect( select_every_n([0,1,2]) ).to eq [0,1,2]
   end
 end
+
+describe "#compile_agenda" do
+  item1 = {
+    title: "Learn about Ruby",
+    priority: 0
+  }
+
+  item2 = {
+    title: "Try to take over the world",
+    priority: 1
+  }
+
+  item3 = {
+    title: "Build a game in ruby",
+    priority: 3
+  }
+
+  it "compiles a list of agenda items into one bulleted string" do
+    expect( compile_agenda( [item1] ) ).to match /Learn about Ruby/
+    expect( compile_agenda( [item1] ) ).to eq "* Learn about Ruby"
+  end
+
+  it "adds line breaks between agenda items" do
+    expect( compile_agenda( [item1, item2] ) ).to eq "* Learn about Ruby\n* Try to take over the world"
+  end
+
+  it "displays items sorted by priority, descending (by default)" do
+    expect( compile_agenda( [item2, item1] ) ).to eq "* Learn about Ruby\n* Try to take over the world"
+  end
+
+  it "can optionally display items sorted by priority ascending" do
+    expect( compile_agenda( [item1, item2, item3], order="ASC" ) ).to eq "* Build a game in ruby\n* Try to take over the world\n* Learn about Ruby"
+  end
+
+  it "can optionally change the bullet to a different string" do
+    expect( compile_agenda( [item1, item2, item3], order="ASC", bullet="~" ) ).to eq "~ Build a game in ruby\n~ Try to take over the world\n~ Learn about Ruby"
+  end
+end
