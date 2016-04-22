@@ -18,6 +18,6 @@ def how_many_args(*args)
   args.count
 end
 
-def find_answer(**kwargs)
+def find_answer(kwargs={})
   kwargs[:answer]
 end
