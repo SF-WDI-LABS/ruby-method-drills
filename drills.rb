@@ -3,25 +3,44 @@
 #########################
 #say_hello
   # returns 'hello'
+def say_hello
+  return "hello"
+end
 
 #echo
   # returns the input string
+def echo(input)
+  return input.to_s
+end
+
+
 
 #eddie_izzards_height
-  # calculates and returns Eddie Izzard's height 
+  # calculates and returns Eddie Izzard's height
   # takes in the height of heels he's wearing (default value: 0)
   # and adds heel height to his base 67 inches for the result
+def eddie_izzards_height(heel_height = 0)
+  return heel_height = heel_height + 67
+end
 
 #how_many_args
   # accepts any number of arguments without complaint
   # returns the total number of arguments passed to the function
   # Hint: google ruby *args
+def how_many_args(*args)
+  args.count
+end
 
-#find_answer 
+
+#find_answer
   # returns the value associated with the 'answer' keyword argument
   # returns nil if it cannot find the 'answer' keyword argument
   # complains when given non-keyword arguments
   # Hint: google ruby keyword arguments
+
+def find_answer(hash = {})
+  hash[:answer]
+end
 
 ##############################
 #### MANIPULATING STRINGS ####
@@ -30,22 +49,35 @@
   # takes in a word
   # returns the first letter of the word
   # lowercases the first letter of the word
+def first_char(string)
+  string[0].downcase
+end
+
 
 #polly_wanna
   # takes in a word
   # echoes the original word
   # repeats the original word 3 times
   # returns a string with the word repeated
+def polly_wanna(string)
+  string * 3
+end
 
 #count_chars
   # takes in a word
   # returns the number of characters in the word
+def count_chars(string)
+  string.length
+end
 
 #yell
   # takes in a message
   # convert the message to uppercase
   # adds an exclamation point to the end of the message
   # returns the message
+def yell(message)
+  message.upcase << "!"
+end
 
 ## STRETCH ##
 #to_telegram
@@ -58,7 +90,6 @@
   # takes in a string
   # converts the string to lowercase
   # returns the input string, with characters seperated by dashes
-
 
 #seperate
   # takes in a string
@@ -105,44 +136,102 @@
   # takes in a string
   # counts the spaces in a string
   # returns number of spaces
+def count_spaces(string)
+  counter = 0
+  string.each_char do |c|
+    if c == " "
+      counter += 1
+    end
+  end
+  counter
+end
 
 #string_lengths
   # takes in an array of strings
   # returns an array containing the lengths of the strings
+def string_lengths(arr)
+  arr_length = []
+  arr.each do |c|
+    arr_length << c.length
+  end
+  arr_length
+end
 
 #remove_falsy_values
   # takes in a list
   # filters out falsy values from a list
   # returns the updated list
+def remove_falsy_values(list)
+  list.select { |c| !!c }
+end
 
 #exclude_last
   # takes in an array or string
   # removes the last item from the array or string
   # returns it
-
+def exclude_last(word)
+  word[0...-1]
+end
 #exclude_first
   # takes in an array or string
   # removes the first item from an array
   # removes the first character from a string
   # returns a new string - does not alter the original input (non-destructive)
+def exclude_first(word)
+  word[1, word.length]
+end
 
 #exclude_ends
   # takes in an array or string
   # removes the first and last items from an array
   # removes the first and last characters from a string
+def exclude_ends(word)
+  word[1, word.length-2]
+end
+
 
 #select_every_even
   # takes in an array
   # returns a list of even-indexed items from the input
+def select_every_even(arr)
+  newArray = []
+  arr.each_with_index do |val, i|
+    if i % 2 == 0
+      newArray << val
+    end
+  end
+  newArray
+end
+
 
 #select_every_odd
   # takes in an array
   # returns a list of odd-indexed items
+def select_every_odd(arr)
+  newArray = []
+  arr.each_with_index do |val, i|
+    if i % 2 != 0
+      newArray << val
+    end
+  end
+  newArray
+end
 
 #select_every_n
   # takes in an array
   # returns a list of items at an index evenly divisible by n
   # defaults to an n value of 1
+def select_every_n(arr, n=1)
+  newArray = []
+  arr.each_with_index do |val, i|
+    if i % n == 0
+      newArray << val
+    end
+  end
+  newArray
+end
+
+
 
 ## STRETCH ##
 #compile_agenda
