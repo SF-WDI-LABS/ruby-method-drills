@@ -232,7 +232,6 @@ def select_every_n(arr, n=1)
 end
 
 
-
 ## STRETCH ##
 #compile_agenda
   # converts a list of agenda items into a single string
@@ -249,6 +248,14 @@ end
   # returns an array containing every integer from 0 to n
   # counts up or down
   # rounds off decimals
+def count_to(num)
+  num = num.to_i
+  if num >= 0
+    (0..num).to_a
+  else
+    0.downto(num).to_a
+  end
+end
 
 #is_integer?
   # takes in a number
@@ -257,6 +264,7 @@ end
   # returns false for non-integer decimals
   # returns false for Float::NAN
   # returns false for non-numbers
+
 
 #is_prime?
   # takes in a number and checks if it's prime
@@ -290,6 +298,19 @@ end
   # counts how many times each character appears in a string
   # ignores case
   # returns the hash
+def character_count(string)
+  counts = {}
+  string.each_char do |i|
+    i = i.downcase
+    if counts[char].nil?
+      counts[char] = 1
+    else
+      counts[char] += 1
+    end
+  end
+  counts
+end
+
 
 ## STRETCH ##
 #word_count
