@@ -73,16 +73,16 @@ You should see roughly the following output:
 
 ### Ruby Tips
 
-When in doubt, test your code in the ruby REPL (`irb`, interactive ruby):  
+When in doubt, test your code in the ruby REPL (`irb`, interactive ruby) or pry (`pry`):  
 ``` bash
-    irb
+    pry
 ```
 
 (This is similar to running the node repl by typing `node`).
 
-When you want to quit `irb`, enter `quit`.
+When you want to quit `irb` or `pry`, enter `quit`.
 
-Inside `irb` you can "hang a dot" and hit `tab` twice to see available methods:
+Inside `pry` you can "hang a dot" and hit `tab` twice to see available methods:
 
 ``` ruby
     2.1.2 :001 > "string". # hang a dot and hit tab twice!
@@ -100,7 +100,7 @@ Inside `irb` you can "hang a dot" and hit `tab` twice to see available methods:
 
 Another handy trick is to load your `drills.rb` file so that you can manually test your functions. This is similar to what we did in node when we used "require" to import a file.
 
-Make sure you're in the correct directory, then in `irb` type:  
+Make sure you're in the correct directory, then in `pry` or `irb` type:  
 ``` ruby
     2.1.2 :002 > load "./drills.rb"
     2.1.2 :003 > say_hello
