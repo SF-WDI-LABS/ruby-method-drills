@@ -1,7 +1,6 @@
 # THIS FILE PERFORMS RSPEC TESTS ON `drills.rb`
 # TO RUN YOUR TESTS TYPE: `rspec spec/argument_spec.rb`
 
-require "spec_helper.rb"
 
 # require "./solutions/arguments.rb"   # use this line to see passing tests
 require "./starter-code/arguments.rb"              # use this line to test your code
@@ -59,7 +58,7 @@ describe "#find_answer" do
     expect( find_answer() ).to eq nil
   end
 
-  it "complains when given non-keyword arguments" do
-    expect { find_answer("bad input") }.to raise_error NoMethodError
+  it "raises a TypeError when given non-keyword arguments" do
+    expect { find_answer("bad input") }.to raise_error TypeError
   end
 end
