@@ -12,6 +12,11 @@ def count_to(n)
   end
 end
 
+# def count_to(n)
+#   n = n.to_i
+#   n >= 0 ? (0..n).to_a : 0.downto(n).to_a
+# end 
+
 def is_integer?(num)
   num.class == Fixnum || num.class == Bignum || 
     ( num.is_a?(Float) && !num.nan? && num.to_i == num )
