@@ -19,9 +19,7 @@ end
 
 
 def is_prime?(num)
-  if !is_integer?(num) || num <= 1 # checking if whole number
-    false
-  elsif num <= 1 # checking if in range
+  if !is_integer?(num) || num <= 1 # must be integer; must be 2 or above
     false
   else 
     # this could be a prime! loop through and check divisibility
