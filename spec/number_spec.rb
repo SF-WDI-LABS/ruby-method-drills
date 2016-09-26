@@ -2,7 +2,7 @@
 # TO RUN YOUR TESTS TYPE: `rspec spec/number_spec.rb`
 
 # require "./solutions/numbers.rb"   # use this line to see passing tests
-require "./drills.rb"              # use this line to test your code
+require "./starter-code/numbers.rb"              # use this line to test your code
 
 
 ##############################
@@ -33,7 +33,7 @@ describe "#is_integer?" do
   end
 
   it "returns true for Floats (decimals) equal to integers" do
-    # note: there are also a few other decimal types - BigDecimal and Rational, 
+    # note: there are also a few other decimal types - BigDecimal and Rational,
     # but we'll ignore them for now
     expect( is_integer?(4.0) ).to eq true
     expect( is_integer?(-6.000) ).to eq true

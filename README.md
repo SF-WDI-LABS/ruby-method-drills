@@ -1,6 +1,18 @@
-## Ruby Method Drills
+<!--
+Creator: GA SF
+Last Edited By: Brianna
+Location: San Francisco
+-->
 
-Can you write code in `drills.rb` to pass the tests in the `spec` folder?
+# <img src="https://cloud.githubusercontent.com/assets/7833470/10899314/63829980-8188-11e5-8cdd-4ded5bcb6e36.png" height="60"> Ruby Method Drills
+
+### Overview
+
+Write code in each starter code file to pass the tests in the `spec` folder!
+
+### Objectives
+
+This will be *way* more practice with Ruby methods and test driven development - and a great opportunity to explore some new tactics!
 
 ### Setup
 
@@ -10,6 +22,18 @@ Fork this repo on GitHub.
 git clone YOUR_FORK_CLONE_URL.git
 cd ruby_method_drills
 ```
+
+The files you'll work on are:
+
+1. `arguments.rb`  -- (test file is `argument_spec.rb`)
+
+2. `strings.rb`  -- (test file is `string_spec.rb`)
+
+3. `iterators.rb`  -- (test file is `iterator_spec.rb`)
+
+4. `numbers.rb`  -- (test file is `number_spec.rb`)
+
+5. `hashes.rb`  -- (test file is `hash_spec.rb`)
 
 #### Testing
 
@@ -32,57 +56,46 @@ To run all the tests type the following in the command line:
 ```bash
     rspec
     # or run a specific spec file
-    rspec spec/1_argument_spec.rb
+    rspec spec/argument_spec.rb
 ```
 
-You should see roughly the following output:
+You should see this as part of your output:
 
-    FFFFFFFF ---> 8 failed tests ("F"), 0 passed tests (".")
-    Failures:
+```
+Failures:
 
-      1) #say_hello returns 'hello'
-         Failure/Error: expect( say_hello ).to eq "hello"
-           
-           expected: "hello"
-                got: "hi"
-           
-           (compared using ==)
-         # ./spec/drills_spec.rb:8:in `block (2 levels) in <top (required)>'
-    
-    Finished in 0.0028 seconds (files took 0.08831 seconds to load)
-    8 examples, 8 failures
+  1) #say_hello returns 'hello'
+     Failure/Error: expect( say_hello ).to eq "hello"
 
-    Failed examples:
-    rspec ./spec/drills_spec.rb:7 # #say_hello returns 'hello'
-
+     NameError:
+       undefined local variable or method `say_hello' for #<RSpec::ExampleGroups::SayHello:0x007f9ef3a9cc68>
+     # ./spec/argument_spec.rb:14:in `block (2 levels) in <top (required)>'
+```
 
 #### Congrats!
 * The first tests are failing. _We're seeing **RED**._
-* Now we need to write code (in `drills.rb`) to pass the tests and _turn them **GREEN**_. 
-* When the test passes, we're ready to _stop and **REFACTOR**_!
+* Now we need to write code (in the starter code directory) to pass the tests and _turn them **GREEN**_.
+* When a test passes, we're ready to _stop and **REFACTOR**_!
 
 ### Rspec Tips
 
-* Pay close attention to the rspec output in your terminal
+* Pay close attention to the rspec output in your terminal.
 * Run your tests frequently and read the output carefully.
 * BE *VERY CAREFUL* to use the correct function name.
-* To limit your test output, consider filtering tests by method name:  
+* To limit your test output, consider filtering tests by method name with the `-e` flag:  
 ``` bash
-    rspec spec/1_argument_spec.rb -e get_fruit
+    rspec spec/argument_spec.rb -e get_fruit
 ```
 
 ### Ruby Tips
 
-When in doubt, test your code in the ruby REPL (`irb`, interactive ruby):  
-``` bash
-    irb
-```
+When in doubt, test your code in the ruby REPL (`irb` or `pry`).
 
 (This is similar to running the node repl by typing `node`).
 
-When you want to quit `irb`, enter `quit`.
+When you want to quit `irb` or `pry`, type and enter `quit`.
 
-Inside `irb` you can "hang a dot" and hit `tab` twice to see available methods:
+Inside `pry`, you can "hang a dot" and hit `tab` twice to see available methods:
 
 ``` ruby
     2.1.2 :001 > "string". # hang a dot and hit tab twice!
@@ -98,17 +111,19 @@ Inside `irb` you can "hang a dot" and hit `tab` twice to see available methods:
     # ...
 ```
 
-Another handy trick is to load your `drills.rb` file so that you can manually test your functions. This is similar to what we did in node when we used "require" to import a file.
+Another handy trick is to load your Ruby file so that you can manually test your functions.
 
-Make sure you're in the correct directory, then in `irb` type:  
+Make sure you're in the correct directory, then in `pry` type:  
 ``` ruby
-    2.1.2 :002 > load "./drills.rb"
+    2.1.2 :002 > load "./starter-code/arguments.rb"
     2.1.2 :003 > say_hello
 ```
+
+(Re-`load` your file after you make changes.)
+
 
 You can also run a ruby file from the command line by typing:
 
 ``` bash
-    ruby drills.rb
+    ruby starter-code/arguments.rb
 ```
-

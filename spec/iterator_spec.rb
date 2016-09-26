@@ -1,8 +1,8 @@
 # THIS FILE PERFORMS RSPEC TESTS ON `drills.rb`
-# TO RUN YOUR TESTS TYPE: `rspec spec/3_iterator_spec.rb`
+# TO RUN YOUR TESTS TYPE: `rspec spec/iterator_spec.rb`
 
 # require "./solutions/iterators.rb"   # use this line to see passing tests
-require "./drills.rb"              # use this line to test your code
+require "./starter-code/iterators.rb"              # use this line to test your code
 
 
 ###########################
@@ -17,6 +17,13 @@ describe "#count_spaces" do
     expect( count_spaces(tab+space*10+tab) ).to eq 10
     expect( count_spaces("") ).to eq 0
     expect( count_spaces(" | | ") ).to eq 3
+  end
+  it "does not count tabs and newlines" do
+    space = "\s"
+    tab = "\t"
+    newline = "\n"
+    expect( count_spaces(tab+space*10+tab) ).to eq 10
+    expect( count_spaces(tab + newline + tab) ).to eq 0
   end
 end
 
