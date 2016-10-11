@@ -1,8 +1,8 @@
 # THIS FILE PERFORMS RSPEC TESTS ON `drills.rb`
-# TO RUN YOUR TESTS TYPE: `rspec spec/2_string_spec.rb`
+# TO RUN YOUR TESTS TYPE: `rspec spec/string_spec.rb`
 
 # require "./solutions/strings.rb"   # use this line to see passing tests
-require "./drills.rb"              # use this line to test your code
+require "./starter-code/strings.rb"              # use this line to test your code
 
 ##############################
 #### MANIPULATING STRINGS ####
