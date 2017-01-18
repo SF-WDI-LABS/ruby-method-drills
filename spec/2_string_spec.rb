@@ -9,19 +9,19 @@ require "./drills.rb"              # use this line to test your code
 ##############################
 
 describe "#first_char" do
-  it "returns the first letter of the word" do
+  it "returns the first letter of the given word" do
     expect( first_char("alex") ).to eq "a"
     expect( first_char("bedford") ).to eq "b"
   end
 
-  it "lowercases the first letter of the word" do
+  it "lowercases the first letter of the given word" do
     expect( first_char("Ben") ).to eq "b"
     expect( first_char("Brianna") ).to eq "b"
   end
 end
 
 describe "#polly_wanna" do
-  it "echoes the original word" do
+  it "includes the given word in its return value" do
     expect( polly_wanna("donut") ).to match /donut/i
     expect( polly_wanna("cracker") ).to match /cracker/i
   end
@@ -33,25 +33,25 @@ describe "#polly_wanna" do
 end
 
 describe "#count_chars" do
-  it "returns the number of characters in a string" do
+  it "returns the number of characters in the given string" do
     expect( count_chars("123") ).to eq 3
     expect( count_chars("123456789") ).to eq 9
   end
 end
 
 describe "#yell" do
-  it "convert the message to uppercase" do
+  it "convert the given message to uppercase" do
     expect( yell("boo") ).to start_with("BOO")
   end
 
-  it "adds an exclamation point to the end of the message" do
+  it "adds an exclamation point to the end of the given message" do
     expect( yell("boo") ).to end_with("!")
     expect( yell("boo") ).to eq "BOO!"
   end
 end
 
 describe "#to_telegram" do
-  it "replaces periods with ' STOP'" do
+  it "replaces periods in the input string with ' STOP'" do
     expect( to_telegram("hello.") ).to eq "hello STOP"
     expect( to_telegram("Hello. It's me.") ).to eq "Hello STOP It's me STOP"
   end
@@ -64,27 +64,27 @@ describe "#spell_out" do
     expect( spell_out("hello") ).to eq "h-e-l-l-o"
   end
 
-  it "converts the string to lowercase" do
+  it "converts the input string to lowercase" do
     expect( spell_out("HEY") ).to eq "h-e-y"
     expect( spell_out("Hello") ).to eq "h-e-l-l-o"
   end
 end
 
 describe "#seperate" do
-  it "seperates characters with a custom seperator, when supplied with one" do
+  it "seperates characters in the input string with a custom seperator, when supplied with one" do
     expect( seperate("hey", "*") ).to eq "h*e*y"
     expect( seperate("hey", "?") ).to eq "h?e?y"
     expect( seperate("hey", "+") ).to eq "h+e+y"
   end
 
-  it "seperates characters with dashes (by default)" do
+  it "seperates characters in the input string with dashes (by default)" do
     expect( seperate("h") ).to eq "h"
     expect( seperate("hey") ).to eq "h-e-y"
   end
 end
 
 describe "#croon" do
-  it "seperates word characters with dashes" do
+  it "seperates characters in each word of the input phrase with dashes" do
     expect( croon("a") ).to eq "a"
     expect( croon("hey") ).to eq "h-e-y"
     expect( croon("hello") ).to eq "h-e-l-l-o"
@@ -97,7 +97,7 @@ describe "#croon" do
 end
 
 describe "#palindrome_word?" do
-  it "determines whether a single word is a palindrome" do
+  it "determines whether a single given word is a palindrome" do
     expect( palindrome_word?("a") ).to eq true
     expect( palindrome_word?("aa") ).to eq true
     expect( palindrome_word?("aaa") ).to eq true
@@ -111,7 +111,7 @@ describe "#palindrome_word?" do
 end
 
 describe "#palindrome_sentence?" do
-  it "determines whether a sentence is a palindrome" do
+  it "determines whether a given sentence is a palindrome" do
     expect( palindrome_sentence?("a a") ).to eq true
     expect( palindrome_sentence?("ab ba") ).to eq true
     expect( palindrome_sentence?("a sentence") ).to eq false
@@ -149,7 +149,7 @@ describe "#is_vowel" do
     end
   end
 
-  it "handles weird inputs gracefully" do
+  it "returns false for non-letter inputs" do
     [9, {}, [], :hello, "xyz"].each do |item|
       expect { is_vowel(item) }.not_to raise_error
       expect( is_vowel(item) ).to be false
@@ -158,7 +158,7 @@ describe "#is_vowel" do
 end
 
 describe "#add_period" do
-  it "adds a period to the end of the sentence" do
+  it "adds a period to the end of the given sentence" do
     expect( add_period("Hello") ).to eq "Hello."
   end
 

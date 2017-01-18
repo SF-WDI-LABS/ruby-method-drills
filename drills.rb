@@ -5,7 +5,7 @@
   # returns 'hello'
 
 #echo
-  # echoes the input string
+  # echoes (returns) the input string
 
 #get_fruit
   # returns the fruit that corresponds to the given id
@@ -13,53 +13,53 @@
   # defaults to 'apple' when no id argument is supplied
 
 #how_many_args
-  # accepts any number of arguments without complaint
+  # accepts any number of arguments without error
   # returns the total number of arguments passed to the function
 
 #find_answer
   # returns the value associated with the 'answer' keyword argument
   # returns nil if it cannot find the 'answer' keyword argument
-  # complains when given non-keyword arguments
+  # raises an error when given non-keyword arguments
 
 ##############################
 #### MANIPULATING STRINGS ####
 ##############################
 #first_char
-  # returns the first letter of the word
-  # lowercases the first letter of the word
+  # returns the first letter of the given word
+  # lowercases the first letter of the given word
 
 #polly_wanna
-  # echoes the original word
-  # repeats the original word 3 times
+  # includes the given word in its return value
+  # repeats the given word 3 times
 
 #count_chars
-  # returns the number of characters in a string
+  # returns the number of characters in the given string
 
 #yell
-  # convert the message to uppercase
-  # adds an exclamation point to the end of the message
+  # convert the given message to uppercase
+  # adds an exclamation point to the end of the given message
 
 #to_telegram
-  # replaces periods with ' STOP'
+  # replaces periods in the input string with ' STOP'
 
 #spell_out
   # returns the input string, with characters seperated by dashes
-  # converts the string to lowercase
+  # converts the input string to lowercase
 
 #seperate
-  # seperates characters with a custom seperator, when supplied with one
-  # seperates characters with dashes (by default)
+  # seperates characters in the input string with a custom seperator, when supplied with one
+  # seperates characters in the input string with dashes (by default)
 
 #croon
-  # seperates word characters with dashes
+  # seperates characters in each word of the input phrase with dashes
   # preserves whitespace between words
 
 #palindrome_word?
-  # determines whether a single word is a palindrome
+  # determines whether a single given word is a palindrome
   # ignores case
 
 #palindrome_sentence?
-  # determines whether a sentence is a palindrome
+  # determines whether a given sentence is a palindrome
   # ignores case
   # ignores whitespace
   # ignores punctuation
@@ -67,10 +67,10 @@
 #is_vowel
   # determines whether a given character is a vowel
   # ignores case
-  # handles weird inputs gracefully
+  # returns false for non-letter inputs
 
 #add_period
-  # adds a period to the end of the sentence
+  # adds a period to the end of the given sentence
   # does not add a period if one is already there
   # does not add a period if any form of terminal punctuation is present
 
@@ -79,35 +79,35 @@
 #### LOOPS & ITERATORS ####
 ###########################
 #count_spaces
-  # counts the spaces in a string
+  # counts the spaces in a given string
 
 #string_lengths
-  # converts a list of strings to a list of string lengths
+  # converts a given list of strings to a list of string lengths
 
 #remove_falsy_values
-  # filters out falsy values from a list
+  # filters out falsy values from the input array
 
 #exclude_last
-  # removes the last item from an array
-  # removes the last item from a string
+  # removes the last item from an input array
+  # removes the last item from an input string
 
 #exclude_first
-  # removes the first item from an array
-  # removes the first character from a string
+  # removes the first item from an input array
+  # removes the first character from an input string
   # does not alter the original input (non-destructive)
 
 #exclude_ends
-  # removes the first and last items from an array
-  # removes the first and last characters from a string
+  # removes the first and last items from an input array
+  # removes the first and last characters from an input string
 
 #select_every_even
-  # returns a list of even-indexed items
+  # returns an array of even-indexed items from the input array
 
 #select_every_odd
-  # returns a list of odd-indexed items
+  # returns an array of odd-indexed items from the input array
 
 #select_every_n
-  # returns a list of items at an index evenly divisible by n
+  # returns an array of items at an index evenly divisible by n, from the input array
   # defaults to an n value of 1
 
 
@@ -116,7 +116,7 @@
 #### MANIPULATING NUMBERS ####
 ##############################
 #count_to
-  # returns an array containing every integer from 0 to n
+  # returns an array containing every integer from 0 to the input n
   # rounds off decimals
 
 #is_integer?
@@ -141,7 +141,7 @@
   # returns 1 for 0 and 1
   # returns NaN for numbers less than 0
   # returns NaN for non-integers
-  # calculates factorial
+  # calculates the factorial of the input number
 
 
 
@@ -149,13 +149,15 @@
 #### MANIPULATING OBJECTS ####
 ##############################
 #character_count
-  # counts how many times each character appears in a string
+  # returns a hash
+  # counts how many times each character appears in the input string
   # ignores case
 
 #word_count
-  # counts how many times a word appears in a string
+  # returns a hash
+  # counts how many times a word appears in the input string
   # ignores case
   # ignores characters that are not in the sequence a-z
 
 #most_frequent_word
-  # finds the word in a string that appears with the most frequency
+  # finds the word in the input string that appears with the most frequency

@@ -32,7 +32,8 @@ def seperate(word, seperator="-")
 end
 
 def croon(lyric)
-  lyric.split(" ").map {|word| word.split("").join("-") }.join(" ")
+  croon_words = lyric.split(" ").map {|word| word.split("").join("-") }
+  croon_words.join(" ")
 end
 
 def palindrome_word?(word)

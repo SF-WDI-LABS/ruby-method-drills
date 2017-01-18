@@ -42,13 +42,13 @@ You should see roughly the following output:
 
       1) #say_hello returns 'hello'
          Failure/Error: expect( say_hello ).to eq "hello"
-           
+
            expected: "hello"
                 got: "hi"
-           
+
            (compared using ==)
          # ./spec/drills_spec.rb:8:in `block (2 levels) in <top (required)>'
-    
+
     Finished in 0.0028 seconds (files took 0.08831 seconds to load)
     8 examples, 8 failures
 
@@ -58,7 +58,7 @@ You should see roughly the following output:
 
 #### Congrats!
 * The first tests are failing. _We're seeing **RED**._
-* Now we need to write code (in `drills.rb`) to pass the tests and _turn them **GREEN**_. 
+* Now we need to write code (in `drills.rb`) to pass the tests and _turn them **GREEN**_.
 * When the test passes, we're ready to _stop and **REFACTOR**_!
 
 ### Rspec Tips
@@ -111,4 +111,3 @@ You can also run a ruby file from the command line by typing:
 ``` bash
     ruby drills.rb
 ```
-

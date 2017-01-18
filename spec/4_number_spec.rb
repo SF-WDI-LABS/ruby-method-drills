@@ -10,7 +10,7 @@ require "./drills.rb"              # use this line to test your code
 ##############################
 
 describe "#count_to" do
-  it "returns an array containing every integer from 0 to n" do
+  it "returns an array containing every integer from 0 to the input n" do
     expect( count_to(0) ).to eq [0]
     expect( count_to(2) ).to eq [0,1,2]
   end
@@ -33,7 +33,7 @@ describe "#is_integer?" do
   end
 
   it "returns true for Floats (decimals) equal to integers" do
-    # note: there are also a few other decimal types - BigDecimal and Rational, 
+    # note: there are also a few other decimal types - BigDecimal and Rational,
     # but we'll ignore them for now
     expect( is_integer?(4.0) ).to eq true
     expect( is_integer?(-6.000) ).to eq true
@@ -104,7 +104,7 @@ describe "#iterative_factorial" do
     expect( iterative_factorial(6.6).nan? ).to eq true
   end
 
-  it "calculates factorial" do
+  it "calculates the factorial of the input number" do
     expect( iterative_factorial(5) ).to eq 120
     expect( iterative_factorial(7) ).to eq 5040
   end

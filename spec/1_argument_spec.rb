@@ -16,7 +16,7 @@ describe "#say_hello" do
 end
 
 describe "#echo" do
-  it "echoes the input string" do
+  it "echoes (returns) the input string" do
     expect( echo("hi") ).to eq "hi"
     expect( echo("hey") ).to eq "hey"
   end
@@ -38,7 +38,7 @@ describe "#get_fruit" do
 end
 
 describe "#how_many_args" do
-  it "accepts any number of arguments without complaint" do
+  it "accepts any number of arguments without error" do
     expect { how_many_args(1) }.not_to raise_error
     expect { how_many_args(1,1,1,1,1,1,1,1,1,1,1,1,1,1,1) }.not_to raise_error
   end
@@ -60,7 +60,7 @@ describe "#find_answer" do
     expect( find_answer() ).to eq nil
   end
 
-  it "complains when given non-keyword arguments" do
+  it "raises an error when given non-keyword arguments" do
     expect { find_answer("bad input") }.to raise_error
   end
 end

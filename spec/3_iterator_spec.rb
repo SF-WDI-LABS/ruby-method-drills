@@ -10,7 +10,7 @@ require "./drills.rb"              # use this line to test your code
 ###########################
 
 describe "#count_spaces" do
-  it "counts the spaces in a string" do
+  it "counts the spaces in a given string" do
     space = "\s"
     tab = "\t"
     expect( count_spaces(space*1) ).to eq 1
@@ -21,7 +21,7 @@ describe "#count_spaces" do
 end
 
 describe "#string_lengths" do
-  it "converts a list of strings to a list of string lengths" do
+  it "converts a given list of strings to a list of string lengths" do
     expect( string_lengths(["abc"]) ).to eq [3]
     expect( string_lengths([""]) ).to eq [0]
     expect( string_lengths(["abc", "a", "123456"]) ).to eq [3, 1, 6]
@@ -29,7 +29,7 @@ describe "#string_lengths" do
 end
 
 describe "#remove_falsy_values" do
-  it "filters out falsy values from a list" do
+  it "filters out falsy values from the input array" do
     expect( remove_falsy_values(["hi"]) ).to eq ["hi"]
     expect( remove_falsy_values([]) ).to eq []
     expect( remove_falsy_values([nil]) ).to eq []
@@ -40,13 +40,13 @@ describe "#remove_falsy_values" do
 end
 
 describe "#exclude_last" do
-  it "removes the last item from an array" do
+  it "removes the last item from an input array" do
     expect( exclude_last([1,2,3]) ).to eq [1,2]
     expect( exclude_last([1,2]) ).to eq [1]
     expect( exclude_last([1]) ).to eq []
   end
 
-  it "removes the last item from a string" do
+  it "removes the last item from an input string" do
     expect( exclude_last("123") ).to eq "12"
     expect( exclude_last("12") ).to eq "1"
     expect( exclude_last("1") ).to eq ""
@@ -54,13 +54,13 @@ describe "#exclude_last" do
 end
 
 describe "#exclude_first" do
-  it "removes the first item from an array" do
+  it "removes the first item from an input array" do
     expect( exclude_first([1,2,3]) ).to eq [2,3]
     expect( exclude_first([1,2]) ).to eq [2]
     expect( exclude_first([1]) ).to eq []
   end
 
-  it "removes the first character from a string" do
+  it "removes the first character from an input string" do
     expect( exclude_first("123") ).to eq "23"
     expect( exclude_first("12") ).to eq "2"
     expect( exclude_first("1") ).to eq ""
@@ -78,33 +78,33 @@ describe "#exclude_first" do
 end
 
 describe "#exclude_ends" do
-  it "removes the first and last items from an array" do
+  it "removes the first and last items from an input array" do
     expect( exclude_ends([1,2,3]) ).to eq [2]
     expect( exclude_ends([1,2]) ).to eq []
   end
 
-  it "removes the first and last characters from a string" do
+  it "removes the first and last characters from an input string" do
     expect( exclude_ends("123") ).to eq "2"
     expect( exclude_ends("12") ).to eq ""
   end
 end
 
 describe "#select_every_even" do
-  it "returns a list of even-indexed items" do
+  it "returns an array of even-indexed items from the input array" do
     expect( select_every_even([0,1,2]) ).to eq [0,2]
     expect( select_every_even(["a","b","c","d","e"]) ).to eq ["a","c","e"]
   end
 end
 
 describe "#select_every_odd" do
-  it "returns a list of odd-indexed items" do
+  it "returns an array of odd-indexed items from the input array" do
     expect( select_every_odd([0,1,2]) ).to eq [1]
     expect( select_every_odd(["a","b","c","d","e"]) ).to eq ["b","d"]
   end
 end
 
 describe "#select_every_n" do
-  it "returns a list of items at an index evenly divisible by n" do
+  it "returns an array of items at an index evenly divisible by n, from the input array" do
     expect( select_every_n(["a","b","c","d","e"], 3) ).to eq ["a","d"]
     expect( select_every_n(["a","b","c","d","e"], 4) ).to eq ["a","e"]
   end
