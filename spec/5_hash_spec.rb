@@ -1,8 +1,8 @@
 # THIS FILE PERFORMS RSPEC TESTS ON `drills.rb`
 # TO RUN YOUR TESTS TYPE: `rspec spec/4_hash_spec.rb`
 
-require "./solutions/hashes.rb"   # use this line to see passing tests
-# require "./drills.rb"              # use this line to test your code
+# require "./solutions/hashes.rb"   # use this line to see passing tests
+require "./drills.rb"              # use this line to test your code
 
 
 ##############################
