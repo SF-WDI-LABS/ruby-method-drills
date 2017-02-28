@@ -6,6 +6,12 @@ Location: San Francisco
 
 # <img src="https://cloud.githubusercontent.com/assets/7833470/10899314/63829980-8188-11e5-8cdd-4ded5bcb6e36.png" height="60"> Ruby Method Drills
 
+<!-- BEGIN SF-WDI-LABS BADGES -->
+<!-- INSTRUCTOR TODO: Make sure to manually bump version number of commits-since ("updates") badge to latest release version -->
+[![Current Labs Version](https://img.shields.io/github/tag/SF-WDI-LABS/ruby-method-drills.svg?label=sf-wdi-labs)](https://github.com/SF-WDI-LABS/ruby-method-drills)
+[![Issues Count](https://img.shields.io/github/issues-raw/SF-WDI-LABS/ruby-method-drills.svg)](https://github.com/SF-WDI-LABS/ruby-method-drills/issues)
+<!-- END SF-WDI-LABS BADGES -->
+
 ### Overview
 
 Write code in each starter code file to pass the tests in the `spec` folder!
