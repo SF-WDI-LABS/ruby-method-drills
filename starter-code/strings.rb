@@ -6,15 +6,27 @@
   # returns the first letter of the word
   # lowercases the first letter of the word
 
+  def first_char(str)
+    str[0].downcase
+  end
+
 #polly_wanna
   # takes in a word
   # echoes the original word
   # repeats the original word 3 times
   # returns a string with the word repeated
 
+  def polly_wanna(word)
+    word*3
+  end
+
 #count_chars
   # takes in a word
   # returns the number of characters in the word
+
+  def count_chars(str)
+    str.length
+  end
 
 #yell
   # takes in a message
@@ -22,24 +34,38 @@
   # adds an exclamation point to the end of the message
   # returns the message
 
+  def yell(str)
+    str.upcase + '!'
+  end
+
 ## STRETCH ##
 #to_telegram
   # takes in a message
   # replaces periods with ' STOP'
   # returns the updated message
 
+  def to_telegram(mess)
+    mess.gsub(/\./,  ' STOP')
+  end
 
 #spell_out
   # takes in a string
   # converts the string to lowercase
   # returns the input string, with characters seperated by dashes
 
+  def spell_out(str)
+    str.downcase.split('').join('-')
+  end
 
 #seperate
   # takes in a string
   # seperates characters with a custom seperator, when supplied with one
   # seperates characters with dashes (by default)
   # returns the modified string
+
+  def seperate(word, cus_sep="-")
+    word.downcase.split("").join(cus_sep)
+  end
 
 ## STRETCH ##
 #croon
