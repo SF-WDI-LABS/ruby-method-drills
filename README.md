@@ -26,7 +26,7 @@ Fork this repo on GitHub.
 
 ``` bash
 git clone YOUR_FORK_CLONE_URL.git
-cd ruby_method_drills
+cd ruby-method-drills
 ```
 
 The files you'll work on are:
