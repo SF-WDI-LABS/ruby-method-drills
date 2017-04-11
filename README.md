@@ -22,10 +22,10 @@ This will be *way* more practice with Ruby methods and test driven development -
 
 ### Setup
 
-Fork this repo on GitHub.
+Clone this repo on GitHub.
 
 ``` bash
-git clone YOUR_FORK_CLONE_URL.git
+git clone https://github.com/SF-WDI-LABS/ruby-method-drills/edit/master/README.md
 cd ruby-method-drills
 ```
 
