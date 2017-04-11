@@ -25,7 +25,7 @@ This will be *way* more practice with Ruby methods and test driven development -
 Clone this repo on GitHub.
 
 ``` bash
-git clone https://github.com/SF-WDI-LABS/ruby-method-drills/edit/master/README.md
+git clone https://github.com/SF-WDI-LABS/ruby-method-drills
 cd ruby-method-drills
 ```
 
