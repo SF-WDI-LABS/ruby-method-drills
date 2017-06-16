@@ -2,6 +2,9 @@
 #### USING ARGUMENTS ####
 #########################
 #say_hello
+  def say_hello
+    "hello"
+  end
   # returns 'hello'
 
 #echo
