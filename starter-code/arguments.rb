@@ -26,6 +26,9 @@ end
   # accepts any number of arguments without complaint
   # returns the total number of arguments passed to the function
   # Hint: google ruby *args
+def how_many_args(*args)
+	args.length
+end
 
 #find_answer
   # returns the value associated with the 'answer' keyword argument
