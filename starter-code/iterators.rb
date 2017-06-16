@@ -48,6 +48,6 @@
 #compile_agenda
   # converts a list of agenda items into a single string
   # titles start with a bullet ("*") and are separated by line breaks ("/n")
-  # sorts items by priority ascending (low to high) by default
-  # sort order can (optionally) be changed to priority descending
+  # sorts items by priority descending (high to low) by default
+  # sort order can (optionally) be changed to priority ascending
   # the bullet can (optionally) be changed to any symbol
