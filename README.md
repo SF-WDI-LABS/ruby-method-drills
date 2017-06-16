@@ -35,11 +35,11 @@ The files you'll work on are:
 
 2. `strings.rb`  -- (test file is `string_spec.rb`)
 
-3. `iterators.rb`  -- (test file is `iterator_spec.rb`)
+3. `numbers.rb`  -- (test file is `number_spec.rb`)
 
-4. `numbers.rb`  -- (test file is `number_spec.rb`)
+4. `hashes.rb`  -- (test file is `hash_spec.rb`)
 
-5. `hashes.rb`  -- (test file is `hash_spec.rb`)
+5. `iterators.rb`  -- (test file is `iterator_spec.rb`)
 
 #### Testing
 
