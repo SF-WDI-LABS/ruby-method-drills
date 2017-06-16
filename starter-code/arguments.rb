@@ -8,10 +8,16 @@ end
   # returns 'hello'
 
 #echo
+def echo str
+  str
+end
   # returns the input string
   # i.e., if the passed input string is "hello", returns "hello"
 
 #eddie_izzards_height
+def eddie_izzards_height heel_height
+  67 + heel_height
+end
   # calculates and returns Eddie Izzard's height
   # takes in the height of heels he's wearing (default value: 0)
   # and adds heel height to his base 67 inches for the result
