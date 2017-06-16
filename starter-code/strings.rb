@@ -36,18 +36,27 @@ end
 
 ## STRETCH ##
 #to_telegram
+  def to_telegram message
+    message.gsub /\./, " STOP"
+  end
   # takes in a message
   # replaces periods with ' STOP'
   # returns the updated message
 
 
 #spell_out
+def spell_out string
+  string.downcase.split("").join("-")
+end
   # takes in a string
   # converts the string to lowercase
   # returns the input string, with characters seperated by dashes
 
 
 #seperate
+def seperate string, seperator="-"
+  string.split("").join(seperator)
+end
   # takes in a string
   # seperates characters with a custom seperator, when supplied with one
   # seperates characters with dashes (by default)
