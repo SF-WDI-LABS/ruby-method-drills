@@ -83,19 +83,6 @@ describe "#seperate" do
   end
 end
 
-describe "#croon" do
-  it "seperates word characters with dashes" do
-    expect( croon("a") ).to eq "a"
-    expect( croon("hey") ).to eq "h-e-y"
-    expect( croon("hello") ).to eq "h-e-l-l-o"
-  end
-
-  it "preserves whitespace between words" do
-    expect( croon("to be") ).to eq "t-o b-e"
-    expect( croon("or not") ).to eq "o-r n-o-t"
-  end
-end
-
 describe "#palindrome_word?" do
   it "determines whether a single word is a palindrome" do
     expect( palindrome_word?("a") ).to eq true

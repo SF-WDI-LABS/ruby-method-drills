@@ -42,10 +42,6 @@
   # returns the modified string
 
 ## STRETCH ##
-#croon
-  # seperates word characters with dashes
-  # preserves whitespace between words
-
 #palindrome_word?
   # determines whether a single word is a palindrome
   # ignores case
