@@ -64,6 +64,10 @@ end
 
 ## STRETCH ##
 #palindrome_word?
+def palindrome_word? word
+  input = word.downcase
+  input.reverse == input
+end
   # determines whether a single word is a palindrome
   # ignores case
   # returns true or false
