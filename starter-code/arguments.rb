@@ -23,6 +23,9 @@ end
   # and adds heel height to his base 67 inches for the result
 
 #how_many_args
+def how_many_args *args
+  args.length
+end
   # accepts any number of arguments without complaint
   # returns the total number of arguments passed to the function
   # Hint: google ruby *args
