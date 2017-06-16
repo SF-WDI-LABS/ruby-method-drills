@@ -6,6 +6,7 @@
 
 #echo
   # returns the input string
+  # i.e., if the passed input string is "hello", returns "hello"
 
 #eddie_izzards_height
   # calculates and returns Eddie Izzard's height
