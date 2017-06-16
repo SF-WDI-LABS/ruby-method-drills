@@ -15,7 +15,7 @@ end
   # i.e., if the passed input string is "hello", returns "hello"
 
 #eddie_izzards_height
-def eddie_izzards_height heel_height
+def eddie_izzards_height heel_height=0
   67 + heel_height
 end
   # calculates and returns Eddie Izzard's height
@@ -31,6 +31,9 @@ end
   # Hint: google ruby *args
 
 #find_answer
+def find_answer options = {}
+  options[:answer] || nil
+end
   # returns the value associated with the 'answer' keyword argument
   # returns nil if it cannot find the 'answer' keyword argument
   # complains when given non-keyword arguments
