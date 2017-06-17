@@ -73,6 +73,9 @@ end
 
 ## SUPER STRETCH ##
 #palindrome_sentence?
+def palindrome_sentence? sentence
+  sentence.downcase.gsub(/\W/i,'') === sentence.downcase.gsub(/\W/i,'').reverse
+end
   # determines whether a sentence is a palindrome
   # ignores case
   # ignores whitespace
