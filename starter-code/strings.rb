@@ -38,6 +38,9 @@ end
 
 ## STRETCH ##
 #to_telegram
+def to_telegram message
+  message.gsub('.', ' STOP')
+end
   # takes in a message
   # replaces periods with ' STOP'
   # returns the updated message
