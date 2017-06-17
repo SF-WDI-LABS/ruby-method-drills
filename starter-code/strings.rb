@@ -28,8 +28,8 @@ end
   # returns the number of characters in the word
 
 #yell
-def yell
-
+def yell msg
+  msg.upcase + '!'
 end
   # takes in a message
   # convert the message to uppercase
@@ -44,6 +44,9 @@ end
 
 
 #spell_out
+def spell_out str
+  str.downcase.split(//).join('-')
+end
   # takes in a string
   # converts the string to lowercase
   # returns the input string, with characters seperated by dashes
