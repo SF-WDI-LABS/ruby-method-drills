@@ -31,8 +31,8 @@ end
   # Hint: google ruby *args
 
 #find_answer
-def find_answer(kwargs={})
-  kwargs[:answer]
+def find_answer(options={})
+  options[:answer]
 end
 # puts find_answer(fish: 10, answer: "yay")
   # returns the value associated with the 'answer' keyword argument
