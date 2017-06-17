@@ -89,12 +89,21 @@ end
   # ignores punctuation
 
 #is_vowel
+def is_vowel str
+  vowels = "aeiouAEIOU"
+  vowels.include? "#{str}"
+end
   # takes in a string of one character
   # determines whether the character is a vowel
   # ignores case
   # handles weird inputs gracefully
 
 #add_period
+def add_period string
+  last = string.slice(-1,1)
+  punctuation = ".;:!?"
+  (punctuation.include? "#{last}") ? string : "#{string}."
+end
   # takes in a string
   # adds a period to the end of the sentence
   # does not add a period if one is already there
