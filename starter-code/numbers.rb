@@ -2,12 +2,24 @@
 #### MANIPULATING NUMBERS ####
 ##############################
 #count_to
+def count_to n
+  n = n.to_i
+  if n >= 0
+    (0..n).to_a
+  else
+    0.downto(n).to_a
+  end
+end
   # takes in a number
   # returns an array containing every integer from 0 to n
   # counts up or down
   # rounds off decimals
 
 #is_integer?
+def is_integer? n
+  n.class == Fixnum || n.class == Bignum ||
+    n.is_a?(Float) && !n.nan? && n.to_i == n 
+end
   # takes in a number
   # returns true for Fixnums and Bignums (whole number or 'integer' types)
   # returns true for Floats (decimals) equal to integers
