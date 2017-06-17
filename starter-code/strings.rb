@@ -37,7 +37,7 @@ end
 ## STRETCH ##
 #to_telegram
   def to_telegram message
-    message.gsub /\./, " STOP"
+    message.gsub(/\./, " STOP")
   end
   # takes in a message
   # replaces periods with ' STOP'
@@ -65,8 +65,8 @@ end
 ## STRETCH ##
 #palindrome_word?
 def palindrome_word? word
-  input = word.downcase
-  input.reverse == input
+  output = word.downcase
+  output.reverse == output
 end
   # determines whether a single word is a palindrome
   # ignores case
@@ -75,18 +75,28 @@ end
 
 ## SUPER STRETCH ##
 #palindrome_sentence?
+def palindrome_sentence? sentence
+  output = sentence.gsub(/[^a-z]/i, "").downcase
+  output.reverse == output
+end
   # determines whether a sentence is a palindrome
   # ignores case
   # ignores whitespace
   # ignores punctuation
 
 #is_vowel
+def is_vowel character
+  character.is_a?(String) && !!character.match(/[aeiou]/i)
+end
   # takes in a string of one character
   # determines whether the character is a vowel
   # ignores case
   # handles weird inputs gracefully
 
 #add_period
+def add_period string
+  ".!?".include?(string[-1]) ? string : string + "."
+end
   # takes in a string
   # adds a period to the end of the sentence
   # does not add a period if one is already there
