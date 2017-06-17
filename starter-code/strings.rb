@@ -2,21 +2,35 @@
 #### MANIPULATING STRINGS ####
 ##############################
 #first_char
+def first_char word
+  word[0].downcase
+end
   # takes in a word
   # returns the first letter of the word
   # lowercases the first letter of the word
 
 #polly_wanna
+def polly_wanna word
+  p word
+  p word * 3
+  return str = word * 3
+end
   # takes in a word
   # echoes the original word
   # repeats the original word 3 times
   # returns a string with the word repeated
 
 #count_chars
+def count_chars word
+  word.length
+end
   # takes in a word
   # returns the number of characters in the word
 
 #yell
+def yell
+
+end
   # takes in a message
   # convert the message to uppercase
   # adds an exclamation point to the end of the message
