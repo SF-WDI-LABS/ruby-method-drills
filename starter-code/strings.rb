@@ -51,8 +51,10 @@ end
   # converts the string to lowercase
   # returns the input string, with characters seperated by dashes
 
-
 #seperate
+def seperate str, delim="-"
+  str.downcase.split("").join(delim)
+end
   # takes in a string
   # seperates characters with a custom seperator, when supplied with one
   # seperates characters with dashes (by default)
@@ -60,6 +62,9 @@ end
 
 ## STRETCH ##
 #palindrome_word?
+def palindrome_word? word
+  word.downcase === word.downcase.reverse ? true : false
+end
   # determines whether a single word is a palindrome
   # ignores case
   # returns true or false
