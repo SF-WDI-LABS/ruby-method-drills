@@ -2,6 +2,15 @@
 #### MANIPULATING NUMBERS ####
 ##############################
 #count_to
+def count_to num
+  a = Array.new
+  if num > 0
+    0.step(num.floor,1) { |i| a.push(i)}
+  else
+    0.step(num.ceil,-1) { |i| a.push(i)}
+  end
+  return a
+end
   # takes in a number
   # returns an array containing every integer from 0 to n
   # counts up or down
