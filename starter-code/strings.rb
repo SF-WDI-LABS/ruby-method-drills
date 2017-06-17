@@ -42,7 +42,6 @@ end
   # replaces periods with ' STOP'
   # returns the updated message
 
-
 #spell_out
 def spell_out str
   str.downcase.split(//).join('-')
@@ -69,7 +68,6 @@ end
   # ignores case
   # returns true or false
 
-
 ## SUPER STRETCH ##
 #palindrome_sentence?
   # determines whether a sentence is a palindrome
@@ -78,12 +76,18 @@ end
   # ignores punctuation
 
 #is_vowel
+def is_vowel char
+  char.is_a?(String) && !!char.match(/[aeiou]/i)
+end
   # takes in a string of one character
   # determines whether the character is a vowel
   # ignores case
   # handles weird inputs gracefully
 
 #add_period
+def add_period str
+  str.end_with?('.','!','?') ? str : str + '.'
+end
   # takes in a string
   # adds a period to the end of the sentence
   # does not add a period if one is already there
