@@ -77,11 +77,15 @@ end
   # sorts items by priority descending (high to low) by default
   # sort order can (optionally) be changed to priority ascending
   # the bullet can (optionally) be changed to any symbol
-def compile_agenda(arr)
+def compile_agenda(arr, order='DSC', bullet='*') 
 	if arr.length == 1
 		"* " + arr.first[:title]
 	else
-		sorted_arr = arr.sort_by { |hash| hash[:priority] }
-		sorted_arr.map { |hash| "* " + hash[:title] + "\n" }.join("").slice(0...-1)
+		if order == 'DSC'
+			sorted_arr = arr.sort_by { |hash| hash[:priority] }
+		elsif order == 'ASC'
+			sorted_arr = arr.sort_by { |hash| hash[:priority] }.reverse
+		end
+		sorted_arr.map { |hash| "#{bullet} " + hash[:title] + "\n" }.join("").slice(0...-1)
 	end
 end
