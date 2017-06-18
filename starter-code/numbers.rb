@@ -18,12 +18,9 @@ end
 
 #is_integer?
 def is_integer? num
-  if num.is_a?(Numeric)
-    num.is_a?(Fixnum) || num.is_a?(Bignum) || (num.is_a?(Float) && num.to_i == num && !num.nan?)
-  else
-    false
-  end
+  num.class == Fixnum || num.class == Bignum || ( num.is_a?(Float) && !num.nan? && num.to_i == num )
 end
+
   # takes in a number
   # returns true for Fixnums and Bignums (whole number or 'integer' types)
   # returns true for Floats (decimals) equal to integers
@@ -71,6 +68,19 @@ end
 
 ## STRETCH ##
 #iterative_factorial
+def iterative_factorial num
+  if num == 0 || num === 1
+    1
+  elsif num < 0 || num.is_a?(Float)
+    Float::NAN
+  else
+    ret = 1
+    num.step(1,-1) { |i|
+      ret = ret * i
+    }
+    ret
+  end
+end
   # takes in a number
   # returns 1 for 0 and 1
   # returns NaN for numbers less than 0
