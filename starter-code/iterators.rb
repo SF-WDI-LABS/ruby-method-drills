@@ -9,21 +9,23 @@
     freqs[" " || 0]
   end
 
-  count_spaces("Hello my name is Matt")
-  # takes in a string
-  # counts the spaces in a string
-  # returns number of spaces
-
 #string_lengths
-  # takes in an array of strings
-  # returns an array containing the lengths of the strings
+def string_lengths arr
+  arr.map { |e| e.length }
+end
 
 #remove_falsy_values
+def remove_falsy_values list
+
+end
   # takes in a list
   # filters out falsy values from a list
   # returns the updated list
 
 #exclude_last
+def exclude_last x
+  x.map {|e| e.last}
+end
   # takes in an array or string
   # removes the last item from the array or string
   # returns it
