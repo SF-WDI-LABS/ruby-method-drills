@@ -15,7 +15,7 @@
 
 #eddie_izzards_height
   def eddie_izzards_height height=0
-    height + 67
+    height + !?
   end
   # calculates and returns Eddie Izzard's height
   # takes in the height of heels he's wearing (default value: 0)
@@ -31,9 +31,9 @@
 
 #find_answer
 def find_answer (answer: nil, **)
-  answer == TypeError ?  "TypeError" : answer
+  answer
 end
   # returns the value associated with the 'answer' keyword argument
   # returns nil if it cannot find the 'answer' keyword argument
-  # complains when given non-keyword arguments
+  # complains when given non-keyword arguments - no idea!?
   # Hint: google ruby keyword arguments
