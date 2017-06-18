@@ -64,7 +64,7 @@ end
 
 ## STRETCH ##
 #iterative_factorial
-def iterative_factorial(num)
+def iterative_factorial num
   if num < 0 || !is_integer?(num)
     return Float::NAN
   end
