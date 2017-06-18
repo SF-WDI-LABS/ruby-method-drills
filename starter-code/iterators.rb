@@ -2,6 +2,14 @@
 #### LOOPS & ITERATORS ####
 ###########################
 #count_spaces
+  def count_spaces str
+    spaces = str.scan(" ")
+    freqs = Hash.new(0)
+    spaces.each { |spaces| freqs[spaces] += 1 }
+    freqs[" " || 0]
+  end
+
+  count_spaces("Hello my name is Matt")
   # takes in a string
   # counts the spaces in a string
   # returns number of spaces
