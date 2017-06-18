@@ -55,6 +55,15 @@ end
   # Hint: google prime numbers!
 
 #primes_less_than
+def primes_less_than num
+  a = []
+  0.step(num-1,1) { |i|
+    if is_prime?(i)
+      a.push(i)
+    end
+  }
+  a
+end
   # takes in a number
   # returns an empty array if there are no primes below num
   # does not return the number itself
