@@ -57,7 +57,7 @@ end
   # seperates characters with a custom seperator, when supplied with one
   # seperates characters with dashes (by default)
   # returns the modified string
-def separate(str,sep='-')
+def seperate(str,sep='-')
   str = str.gsub!('',sep).chop
   str.slice(1..str.length)
 end
@@ -68,6 +68,9 @@ end
   # determines whether a single word is a palindrome
   # ignores case
   # returns true or false
+  def palindrome_word?(word)
+    word.downcase == word.reverse.downcase ? true : false
+  end
 
 
 ## SUPER STRETCH ##
@@ -76,12 +79,20 @@ end
   # ignores case
   # ignores whitespace
   # ignores punctuation
+  def palindrome_sentence?(str)
+    str = str.downcase.gsub!(' ','').gsub(/\W+/, '')
+    str == str.reverse ? true : false
+  end
 
 #is_vowel
   # takes in a string of one character
   # determines whether the character is a vowel
   # ignores case
   # handles weird inputs gracefully
+  def is_vowel(char)
+    char = char.downcase
+    'aeiou'[char] ? true : false
+  end
 
 #add_period
   # takes in a string
@@ -89,3 +100,7 @@ end
   # does not add a period if one is already there
   # does not add a period if any form of terminal punctuation is present
   # returns the sentence
+  def add_period(str)
+    (str[-1,1] == '.') || (str[-1,1] == '?') ? str : str.concat('.')
+    # (str[-1,1] == '/\W+/') ? str : str.concat('.')
+  end
