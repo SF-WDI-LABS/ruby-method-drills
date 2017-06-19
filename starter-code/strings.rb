@@ -21,7 +21,6 @@ def yell msg
   msg.upcase.concat(33)
 end
 
-
 ## STRETCH ##
 #to_telegram
 def to_telegram msg
@@ -56,15 +55,7 @@ def is_vowel ltr
   ltr =~ /^[aeiou]/i ?  true : false
 end
 
-
 #add_period
 def add_period str
   str[-1] =~ /[.!?]/ ? str : str << "."
 end
-
-p add_period("Does this work?")
-  # takes in a string
-  # adds a period to the end of the sentence
-  # does not add a period if one is already there
-  # does not add a period if any form of terminal punctuation is present
-  # returns the sentence

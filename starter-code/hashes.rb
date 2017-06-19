@@ -26,7 +26,3 @@ def most_frequent_word str
   wds = str.split(' ')
   wds.group_by {|i| i}.max_by {|k, v| v.count }[0]
 end
-
-
-  # takes in a string
-  # finds the word in a string that appears with the most frequency
