@@ -24,7 +24,7 @@
 
 
 #find_answer
-def find_answer (answer: nil, **)
+def find_answer (answer: nil, **opts)
   answer
 end
 

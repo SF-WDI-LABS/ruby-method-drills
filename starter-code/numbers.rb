@@ -9,7 +9,7 @@ end
 
 #is_integer?
 def is_integer? num
-  if num.is_a?(Integer) and num % 1 == 0
+  if (num.is_a?(Integer) || (num.is_a?(Float) && num % 1 == 0.0))
     return true
   else
       return false
