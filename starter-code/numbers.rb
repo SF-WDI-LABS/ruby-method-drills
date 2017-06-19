@@ -44,8 +44,7 @@ end
 
 ## STRETCH ##
 #iterative_factorial
-  # takes in a number
-  # returns 1 for 0 and 1
-  # returns NaN for numbers less than 0
+def iterative_factorial num
+  num < 0 ? Float::NAN : (1..num).inject(1, :*)
+end
   # returns NaN for non-integers
-  # calculates and returns the factorial of the input number
