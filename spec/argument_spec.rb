@@ -58,7 +58,7 @@ describe "#find_answer" do
     expect( find_answer() ).to eq nil
   end
 
-  it "raises a TypeError when given non-keyword arguments" do
-    expect { find_answer("bad input") }.to raise_error TypeError
+  it "raises an error when given non-keyword arguments" do
+    expect { find_answer("bad input") }.to raise_error
   end
 end
