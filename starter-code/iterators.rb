@@ -5,15 +5,29 @@
   # takes in a string
   # counts the spaces in a string
   # returns number of spaces
-
+  def count_spaces(str)
+    str.count(' ')
+  end
 #string_lengths
   # takes in an array of strings
   # returns an array containing the lengths of the strings
+  def string_lengths(arr)
+    res = []
+    arr.each{|x| res.push(x.length)}
+    return res
+  end
+
 
 #remove_falsy_values
   # takes in a list
   # filters out falsy values from a list
   # returns the updated list
+  def remove_falsy_values(arr)
+    # res = []
+    # arr.each{|x| x} ? res.push(x) : res
+    arr.keep_if{|x| !x == false}
+
+  end
 
 #exclude_last
   # takes in an array or string
