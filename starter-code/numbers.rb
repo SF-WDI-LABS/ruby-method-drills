@@ -67,12 +67,10 @@ end
   # returns NaN for non-integers
   # calculates and returns the factorial of the input number
 def iterative_factorial(num)
-	if num < 0
+	if num < 0 || !(is_integer?(num))
 		Float::NAN
 	elsif num == (0 || 1)
 		1
-	elsif !(is_integer?(num))
-		Float::NAN
 	else
 		num.downto(1).reduce(:*)
 	end
