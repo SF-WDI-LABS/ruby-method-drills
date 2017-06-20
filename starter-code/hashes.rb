@@ -6,6 +6,10 @@
   # counts how many times each character appears in a string
   # ignores case
   # returns the hash
+#https://stackoverflow.com/questions/16124735/letter-count-in-a-sentence-using-ruby
+  def character_count character
+    character.scan(/\w/).inject(Hash.new(0)){|h, c| h[c] += 1; h}
+  end
 
 ## STRETCH ##
 #word_count
