@@ -18,7 +18,7 @@ end
 #is_integer?
 def is_integer? n
   n.class == Fixnum || n.class == Bignum ||
-    n.is_a?(Float) && !n.nan? && n.to_i == n
+  n.is_a?(Float) && !n.nan? && n.to_i == n
 end
   # takes in a number
   # returns true for Fixnums and Bignums (whole number or 'integer' types)
@@ -48,7 +48,7 @@ end
   # Hint: google prime numbers!
 
 #primes_less_than
-def primes_less_than(num)
+def primes_less_than num
   primes = []
   (2..num-1).each do |n|
     if is_prime?(n)
