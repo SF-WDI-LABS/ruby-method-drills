@@ -52,7 +52,7 @@ end
 
 #is_vowel
 def is_vowel ltr
-  ltr =~ /^[aeiou]/i ?  true : false
+  ltr =~ /^[aeiou]\b/i ?  true : false
 end
 
 #add_period

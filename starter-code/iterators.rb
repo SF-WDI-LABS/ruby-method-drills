@@ -16,30 +16,23 @@ end
 
 #remove_falsy_values
 def remove_falsy_values list
-
+  list.reject { |v| v == false }.compact
 end
-  # takes in a list
-  # filters out falsy values from a list
-  # returns the updated list
 
 #exclude_last
-def exclude_last x
-  x.map {|e| e.last}
+def exclude_last arr
+  arr[0..-2]
 end
-  # takes in an array or string
-  # removes the last item from the array or string
-  # returns it
 
 #exclude_first
-  # takes in an array or string
-  # removes the first item from an array
-  # removes the first character from a string
-  # returns a new string - does not alter the original input (non-destructive)
+def exclude_first arr
+  arr[1..-1]
+end
 
 #exclude_ends
-  # takes in an array or string
-  # removes the first and last items from an array
-  # removes the first and last characters from a string
+def exclude_ends arr
+  arr[0..-2].reverse[0..-2].reverse
+end
 
 #select_every_even
   # takes in an array
