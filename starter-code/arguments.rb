@@ -3,6 +3,10 @@
 #########################
 #say_hello
   # returns 'hello'
+def say_hello
+  return "hello"
+end
+
 
 #echo
   # returns the input string
