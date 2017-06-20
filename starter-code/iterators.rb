@@ -23,40 +23,59 @@
   # filters out falsy values from a list
   # returns the updated list
   def remove_falsy_values(arr)
-    # res = []
-    # arr.each{|x| x} ? res.push(x) : res
     arr.keep_if{|x| !x == false}
-
   end
 
 #exclude_last
   # takes in an array or string
   # removes the last item from the array or string
   # returns it
+  def exclude_last(arr)
+    last = arr.length - 1
+    arr.slice(0,last)
+  end
 
 #exclude_first
   # takes in an array or string
   # removes the first item from an array
   # removes the first character from a string
   # returns a new string - does not alter the original input (non-destructive)
+  def exclude_first(arr)
+    last = arr.length - 1
+    arr.slice(1,last)
+  end
 
 #exclude_ends
   # takes in an array or string
   # removes the first and last items from an array
   # removes the first and last characters from a string
+  def exclude_ends(arr)
+    last = arr.length - 1
+    arr.slice(1,last).slice(0,last-1)
+  end
 
 #select_every_even
   # takes in an array
   # returns a list of even-indexed items from the input
+  def select_every_even(arr)
+    arr.keep_if{|x| arr.index(x).even?}
+  end
 
 #select_every_odd
   # takes in an array
   # returns a list of odd-indexed items
+  def select_every_odd(arr)
+    arr.keep_if{|x| arr.index(x).odd?}
+  end
 
 #select_every_n
   # takes in an array
   # returns a list of items at an index evenly divisible by n
   # defaults to an n value of 1
+  def select_every_n(arr,n=1)
+    arr.keep_if{|x| arr.index(x)% n == 0}
+  end
+
 
 ## STRETCH ##
 #compile_agenda

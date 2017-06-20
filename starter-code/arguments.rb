@@ -37,6 +37,6 @@ end
   # complains when given non-keyword arguments
   # Hint: google ruby keyword arguments
   def find_answer(answer:)
-    "#{answer}"
+    answer
 
   end

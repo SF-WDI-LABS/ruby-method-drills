@@ -20,7 +20,7 @@
   # returns false for non-integer decimals
   # returns false for Float::NAN
   # returns false for non-numbers
-  def is_integer(num)
+  def is_integer?(num)
     num
   end
 
