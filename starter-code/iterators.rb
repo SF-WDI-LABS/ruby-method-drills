@@ -2,11 +2,18 @@
 #### LOOPS & ITERATORS ####
 ###########################
 #count_spaces
+def count_spaces string
+  string.count " "
+end
   # takes in a string
   # counts the spaces in a string
   # returns number of spaces
 
 #string_lengths
+def string_lengths arr
+  new_arr = arr.each { |e| e.length}
+  new_arr
+end
   # takes in an array of strings
   # returns an array containing the lengths of the strings
 
@@ -16,6 +23,8 @@
   # returns the updated list
 
 #exclude_last
+def exclude_last element
+
   # takes in an array or string
   # removes the last item from the array or string
   # returns it
