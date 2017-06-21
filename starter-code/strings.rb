@@ -81,6 +81,9 @@
   # determines whether the character is a vowel
   # ignores case
   # handles weird inputs gracefully
+  def is_vowel (str)
+    str
+  end
 
 #add_period
   # takes in a string
@@ -88,3 +91,6 @@
   # does not add a period if one is already there
   # does not add a period if any form of terminal punctuation is present
   # returns the sentence
+  def add_period (str)
+    str + "."
+  end
