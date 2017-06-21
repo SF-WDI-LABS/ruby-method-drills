@@ -25,6 +25,16 @@
   # returns false for Float::NAN
   # returns false for non-numbers
 
+  # def is_integer? num ## my answer is not working
+  #   num.is_a?(integer) || num.is_a?(float) && num % 1 == 0.0
+  # end
+  ##Hello teacher! Accord to the world wide internets - Fixnums and Bignums classes are gone in Ruby 2.4.
+
+  def is_integer?(num) ## working soultions answer
+    num.class == Fixnum || num.class == Bignum ||
+      ( num.is_a?(Float) && !num.nan? && num.to_i == num )
+  end
+
 #is_prime?
   # takes in a number and checks if it's prime
   # returns false for non-integer decimals
@@ -33,11 +43,34 @@
   # returns true for prime numbers
   # Hint: google prime numbers!
 
+  def is_prime?(num)
+    if !is_integer?(num) || num <= 1
+      false
+    else
+    (2..num).each do |n|
+      if (2..n-1).all? {|no| n % no  > 0}
+       false ##not clearing "returns false for numbers divisible by anything but 1 and themselves (FAILED - 1)"
+    end
+  end
+   true
+  end
+end
+
 #primes_less_than
   # takes in a number
   # returns an empty array if there are no primes below num
   # does not return the number itself
   # finds all primes less than the given number
+
+  def primes_less_than(num)
+    primes = []
+    (2..num-1).each do |n|
+      if is_prime?(n)
+        primes.push n
+      end
+    end
+    primes
+  end
 
 ## STRETCH ##
 #iterative_factorial
