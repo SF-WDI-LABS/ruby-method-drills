@@ -2,6 +2,9 @@
 #### MANIPULATING HASHES ####
 ##############################
 #character_count
+def character_count string
+  string.downcase.split(//).inject(Hash.new(0)) { |h,v| h[v] += 1; h }
+end
   # takes in a string
   # counts how many times each character appears in a string
   # ignores case
@@ -9,6 +12,9 @@
 
 ## STRETCH ##
 #word_count
+def word_count string
+  string.downcase.gsub(/(?![ ])[^a-z]/,'').split(/ /).inject(Hash.new(0)) { |h,v| h[v] += 1; h }
+end
   # takes in a string
   # counts how many times a word appears in a string
   # ignores case
