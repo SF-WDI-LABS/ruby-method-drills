@@ -22,7 +22,10 @@
 #count_chars
   # takes in a word
   # returns the number of characters in the word
-
+  def count_chars(str)
+    str.length
+  end
+  
 #yell
   # takes in a message
   # convert the message to uppercase
