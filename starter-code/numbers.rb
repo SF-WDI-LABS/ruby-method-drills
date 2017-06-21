@@ -16,9 +16,6 @@ def is_integer? num
   end
 end
 
-# returns true for Floats (decimals) equal to integers -- !!?!!?!?
-
-
 #is_prime?
 require 'prime'
 def is_prime? num
@@ -47,4 +44,4 @@ end
 def iterative_factorial num
   num < 0 ? Float::NAN : (1..num).inject(1, :*)
 end
-  # returns NaN for non-integers
+  # returns NaN for non-integers fails - not sure why

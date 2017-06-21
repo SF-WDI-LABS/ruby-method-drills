@@ -22,7 +22,10 @@ end
 ## STRETCH ##
 #most_frequent_word
 def most_frequent_word str
+  # remove special characters
   str = str.gsub(/[^a-zA-Z ]/, '')
+  # split string into an array
   wds = str.split(' ')
+  # group array by index, find max count of values
   wds.group_by {|i| i}.max_by {|k, v| v.count }[0]
 end

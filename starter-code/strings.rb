@@ -1,6 +1,7 @@
 ##############################
 #### MANIPULATING STRINGS ####
 ##############################
+
 #first_char
 def first_char str
   str.downcase.chr
