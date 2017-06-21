@@ -103,6 +103,15 @@ end
 
 ## STRETCH ##
 #compile_agenda
+def compile_agenda agenda_items, options = {}
+  order = options[:order]
+  bullet = options[:bullet] || '*'
+  string = ''
+  agenda_items.each {|hash|
+    string = string + bullet + ' ' + hash[:title]
+  }
+  string
+end
   # converts a list of agenda items into a single string
   # titles start with a bullet ("*") and are separated by line breaks ("/n")
   # sorts items by priority descending (high to low) by default
