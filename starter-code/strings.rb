@@ -95,7 +95,7 @@ end
   # handles weird inputs gracefully
 
 def is_vowel onechar
-  onechar.is_a?(String) && !!onechar.match(/[aeiou]/i)
+  onechar.is_a?(String) && !!onechar.match(/[aeiouAEIOU]/)
 end
 
 #add_period
@@ -104,3 +104,8 @@ end
   # does not add a period if one is already there
   # does not add a period if any form of terminal punctuation is present
   # returns the sentence
+
+def add_period stringthing
+  stringthing << "."
+  
+end
