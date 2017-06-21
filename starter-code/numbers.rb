@@ -7,6 +7,16 @@
   # counts up or down
   # rounds off decimals
 
+  def count_to n
+    n = n.to_i
+    if n > 0
+      x = (0..n).to_a
+      p x
+    else
+      0.downto(n).to_a
+    end
+  end
+
 #is_integer?
   # takes in a number
   # returns true for Fixnums and Bignums (whole number or 'integer' types)
