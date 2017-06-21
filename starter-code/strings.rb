@@ -90,8 +90,7 @@ end
   # ignores case
   # handles weird inputs gracefully
   def is_vowel(char)
-    char = char.downcase
-    'aeiou'[char] ? true : false
+    char.match(/[aeiou]/i) && char.is_a?(String) ? true : false
   end
 
 #add_period
@@ -101,6 +100,5 @@ end
   # does not add a period if any form of terminal punctuation is present
   # returns the sentence
   def add_period(str)
-    (str[-1,1] == '.') || (str[-1,1] == '?') ? str : str.concat('.')
-    # (str[-1,1] == '/\W+/') ? str : str.concat('.')
+    (str[-1,1] == '.') || (str[-1,1] == '?')|| (str[-1,1] == '!')? str : str.concat('.')
   end

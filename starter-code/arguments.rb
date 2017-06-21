@@ -36,7 +36,7 @@ end
   # returns nil if it cannot find the 'answer' keyword argument
   # complains when given non-keyword arguments
   # Hint: google ruby keyword arguments
-  def find_answer(answer:)
-    answer
+  def find_answer(:answer)
+    :answer
 
   end

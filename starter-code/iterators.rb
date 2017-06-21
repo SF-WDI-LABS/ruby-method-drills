@@ -84,3 +84,6 @@
   # sorts items by priority descending (high to low) by default
   # sort order can (optionally) be changed to priority ascending
   # the bullet can (optionally) be changed to any symbol
+  def compile_agenda(arr)
+    arr.join('*')
+  end
