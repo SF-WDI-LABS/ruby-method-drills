@@ -5,6 +5,9 @@
   # takes in a word
   # returns the first letter of the word
   # lowercases the first letter of the word
+  def first_char(str)
+    str[0].downcase
+  end
 
 #polly_wanna
   # takes in a word
