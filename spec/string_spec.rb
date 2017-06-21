@@ -58,7 +58,7 @@ describe "#to_telegram" do
 end
 
 describe "#spell_out" do
-  it "returns the input string, with characters seperated by dashes" do
+  it "returns the input string, with characters separated by dashes" do
     expect( spell_out("h") ).to eq "h"
     expect( spell_out("hey") ).to eq "h-e-y"
     expect( spell_out("hello") ).to eq "h-e-l-l-o"
@@ -70,16 +70,16 @@ describe "#spell_out" do
   end
 end
 
-describe "#seperate" do
-  it "seperates characters with a custom seperator, when supplied with one" do
-    expect( seperate("hey", "*") ).to eq "h*e*y"
-    expect( seperate("hey", "?") ).to eq "h?e?y"
-    expect( seperate("hey", "+") ).to eq "h+e+y"
+describe "#separate" do
+  it "separates characters with a custom separator, when supplied with one" do
+    expect( separate("hey", "*") ).to eq "h*e*y"
+    expect( separate("hey", "?") ).to eq "h?e?y"
+    expect( separate("hey", "+") ).to eq "h+e+y"
   end
 
-  it "seperates characters with dashes (by default)" do
-    expect( seperate("h") ).to eq "h"
-    expect( seperate("hey") ).to eq "h-e-y"
+  it "separates characters with dashes (by default)" do
+    expect( separate("h") ).to eq "h"
+    expect( separate("hey") ).to eq "h-e-y"
   end
 end
 
