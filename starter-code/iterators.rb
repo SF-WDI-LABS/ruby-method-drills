@@ -2,20 +2,36 @@
 #### LOOPS & ITERATORS ####
 ###########################
 #count_spaces
+def count_spaces string
+  string.scan(/ /i).length
+end
   # takes in a string
   # counts the spaces in a string
   # returns number of spaces
 
 #string_lengths
+def string_lengths strings
+  return_array = []
+  strings.each { |s|
+    return_array.push(s.length)
+  }
+  return_array
+end
   # takes in an array of strings
   # returns an array containing the lengths of the strings
 
 #remove_falsy_values
+def remove_falsy_values list
+  list.delete_if { |l| !l }
+end
   # takes in a list
   # filters out falsy values from a list
   # returns the updated list
 
 #exclude_last
+def exclude_last array_or_string
+  
+end
   # takes in an array or string
   # removes the last item from the array or string
   # returns it

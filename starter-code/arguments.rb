@@ -34,6 +34,10 @@ end
 def find_answer options = {}
   options[:answer] || nil
 end
+
+# def find_answer(answer: nil, **opts)
+#   answer
+# end
   # returns the value associated with the 'answer' keyword argument
   # returns nil if it cannot find the 'answer' keyword argument
   # complains when given non-keyword arguments
