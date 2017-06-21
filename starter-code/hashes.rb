@@ -6,6 +6,9 @@
   # counts how many times each character appears in a string
   # ignores case
   # returns the hash
+  def character_count  potato
+    potato
+  end
 
 ## STRETCH ##
 #word_count
