@@ -30,28 +30,56 @@ end
 
 #exclude_last
 def exclude_last array_or_string
-  
+  if array_or_string.is_a?(Array)
+    array_or_string.pop
+  end
+  if array_or_string.is_a?(String)
+    arr = array_or_string.split(//i)
+    arr.pop
+    array_or_string = arr.join
+  end
+  array_or_string
 end
   # takes in an array or string
   # removes the last item from the array or string
   # returns it
 
 #exclude_first
+def exclude_first array_or_string
+  if array_or_string.is_a?(Array)
+    array_or_string.drop(1)
+  end
+  if array_or_string.is_a?(String)
+    arr = array_or_string.split(//i)
+    arr.drop(1)
+    array_or_string = arr.join
+  end
+  array_or_string
+end
   # takes in an array or string
   # removes the first item from an array
   # removes the first character from a string
   # returns a new string - does not alter the original input (non-destructive)
 
 #exclude_ends
+def exclude_ends array_or_string
+  
+end
   # takes in an array or string
   # removes the first and last items from an array
   # removes the first and last characters from a string
 
 #select_every_even
+def select_every_even array
+  array.select.with_index {|item, index| index.even?}
+end
   # takes in an array
   # returns a list of even-indexed items from the input
 
 #select_every_odd
+def select_every_odd array
+  array.select.with_index {|item, index| index.odd?}
+end
   # takes in an array
   # returns a list of odd-indexed items
 
