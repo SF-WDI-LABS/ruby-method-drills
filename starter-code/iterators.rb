@@ -47,11 +47,11 @@ end
 #exclude_first
 def exclude_first array_or_string
   if array_or_string.is_a?(Array)
-    array_or_string.drop(1)
+    array_or_string = array_or_string.drop(1)
   end
   if array_or_string.is_a?(String)
     arr = array_or_string.split(//i)
-    arr.drop(1)
+    arr = arr.drop(1)
     array_or_string = arr.join
   end
   array_or_string
@@ -63,7 +63,17 @@ end
 
 #exclude_ends
 def exclude_ends array_or_string
-  
+  if array_or_string.is_a?(Array)
+    array_or_string = array_or_string.drop(1)
+    array_or_string.pop
+  end
+  if array_or_string.is_a?(String)
+    arr = array_or_string.split(//i)
+    arr = arr.drop(1)
+    arr.pop
+    array_or_string = arr.join
+  end
+  array_or_string
 end
   # takes in an array or string
   # removes the first and last items from an array
@@ -84,6 +94,9 @@ end
   # returns a list of odd-indexed items
 
 #select_every_n
+def select_every_n array, n = 1
+  array.select.with_index {|item, index| index % n === 0}
+end
   # takes in an array
   # returns a list of items at an index evenly divisible by n
   # defaults to an n value of 1
