@@ -58,6 +58,9 @@
   # seperates characters with a custom seperator, when supplied with one
   # seperates characters with dashes (by default)
   # returns the modified string
+  def seperate (str, seperator='-')
+    str.split('').join(seperator)
+  end
 
 ## STRETCH ##
 #palindrome_word?
