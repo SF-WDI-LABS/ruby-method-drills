@@ -25,12 +25,15 @@
   def count_chars(str)
     str.length
   end
-  
+
 #yell
   # takes in a message
   # convert the message to uppercase
   # adds an exclamation point to the end of the message
   # returns the message
+  def yell(str)
+    str.upcase + "!"
+  end
 
 ## STRETCH ##
 #to_telegram
