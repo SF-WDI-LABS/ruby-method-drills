@@ -6,7 +6,13 @@
   # counts the spaces in a string
   # returns number of spaces
   def count_spaces(str)
-    str
+    space = " "
+    count = 0
+    char = str.each_char
+    if char == space
+      count += 1
+    end
+    count
   end
 
 #string_lengths
@@ -73,7 +79,7 @@
   def select_every_n(arr)
 
   end
-  
+
 
 ## STRETCH ##
 #compile_agenda
