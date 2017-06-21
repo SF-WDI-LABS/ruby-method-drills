@@ -6,6 +6,11 @@
   # counts how many times each character appears in a string
   # ignores case
   # returns the hash
+  def character_count(str)
+    char_counts = {}
+    str.each_char
+  end
+  puts 3
 
 ## STRETCH ##
 #word_count
