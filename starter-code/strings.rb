@@ -107,5 +107,4 @@ end
 
 def add_period stringthing
   stringthing << "."
-  
 end

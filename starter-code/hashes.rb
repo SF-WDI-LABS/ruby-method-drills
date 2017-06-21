@@ -20,7 +20,7 @@ def character_count(stringthing)
     end
     last_char = char
     letter_count[char] = char_one_two_three if (letter_count[char]||0) < char_one_two_three
-end
+  end
 letter_count
 end
 
