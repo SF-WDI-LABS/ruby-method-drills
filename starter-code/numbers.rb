@@ -7,7 +7,7 @@
   # counts up or down
   # rounds off decimals
   def count_to (x)
-
+    x >= 0 ? (0..x).to_a : 0.downto(x).to_a
   end
 
 #is_integer?
