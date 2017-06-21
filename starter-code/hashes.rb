@@ -2,6 +2,11 @@
 #### MANIPULATING HASHES ####
 ##############################
 #character_count
+def character_count word
+  out = Hash.new(0)
+  word.downcase.each_char{|c| out[c] += 1}
+  out
+end
   # takes in a string
   # counts how many times each character appears in a string
   # ignores case
