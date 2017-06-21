@@ -61,7 +61,7 @@ def select_every_odd array
   array.select {|el| array.index(el).odd?}
 end
   # takes in an array
-  # returns a list of odd-indexed items
+  # returns a list of odd-indexed iems
 
 #select_every_n
 def select_every_n(array, n=1)
