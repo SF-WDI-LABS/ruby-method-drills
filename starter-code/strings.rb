@@ -41,7 +41,7 @@
   # replaces periods with ' STOP'
   # returns the updated message
   def to_telegram(telegram)
-    telegram.gsub(/./, ' STOP')
+    telegram.gsub(/\./, ' STOP')
   end
 
 
