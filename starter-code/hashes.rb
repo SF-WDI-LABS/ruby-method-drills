@@ -27,7 +27,7 @@ end
   def word_count(str)
     arr = str.downcase.split(' ')
     counts = {}
-    arr.each{|x| x.match?(/[a-z]/) ? counts[x] = arr.count(x) : nil }
+    arr.each{|x| x.match?(/^[a-z]/i) ? counts[x] = arr.count(x) : nil }
     counts
   end
 

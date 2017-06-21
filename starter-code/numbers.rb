@@ -21,7 +21,8 @@
   # returns false for Float::NAN
   # returns false for non-numbers
   def is_integer?(num)
-    num
+    num.class == Fixnum || num.class == Bignum ||
+      ( num.is_a?(Float) && !num.nan? && num.to_i == num )
   end
 
 #is_prime?
@@ -33,10 +34,14 @@
   # Hint: google prime numbers!
   def is_prime?(n)
   foundDivider = false
+  if(n <= 1 || !(n.is_a?(Integer)))
+    foundDivider
+  else
    for d in 2..(n - 1)
     foundDivider = ((n % d) == 0) || foundDivider
    end
   not foundDivider
+  end
  end
 
 #primes_less_than
@@ -44,6 +49,14 @@
   # returns an empty array if there are no primes below num
   # does not return the number itself
   # finds all primes less than the given number
+  def primes_less_than(num)
+    require 'prime'
+    arr = []
+    Prime.each(num) do |prime| arr.push(prime)
+    end
+    num.prime? ? arr.pop : arr
+    return arr
+  end
 
 ## STRETCH ##
 #iterative_factorial
@@ -52,3 +65,12 @@
   # returns NaN for numbers less than 0
   # returns NaN for non-integers
   # calculates and returns the factorial of the input number
+  def iterative_factorial(n)
+  if (n == 0 || n == 1)
+    1
+  elsif (n < 0 || !(n.is_a?(Integer)))
+    Float::NAN
+  else
+    n * iterative_factorial(n-1)
+  end
+end
