@@ -58,7 +58,7 @@
   # seperates characters with a custom seperator, when supplied with one
   # seperates characters with dashes (by default)
   # returns the modified string
-  def seperate word, *s
+  def seperate word, s="-"
     word.split("").join("#{s}")
   end
 

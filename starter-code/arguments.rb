@@ -18,10 +18,7 @@
   # calculates and returns Eddie Izzard's height
   # takes in the height of heels he's wearing (default value: 0)
   # and adds heel height to his base 67 inches for the result
-  def eddie_izzards_height heel_height
-    if heel_height == ""
-      heel_height = 0
-    end
+  def eddie_izzards_height heel_height=0
     height = 67 + heel_height
   end
 

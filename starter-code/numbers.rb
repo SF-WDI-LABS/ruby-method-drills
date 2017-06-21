@@ -93,6 +93,15 @@
   # returns NaN for numbers less than 0
   # returns NaN for non-integers
   # calculates and returns the factorial of the input number
-def iterative_factorial
-
+def iterative_factorial n
+  if n == 1
+    return 1
+  end
+  if n == 0
+    return 1
+  end
+  if n < 0
+     return NaN
+   end
+(1..n).reduce(:*)
 end
