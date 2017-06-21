@@ -10,6 +10,7 @@
     char_counts = {}
     str.each_char
   end
+  puts 3
 
 ## STRETCH ##
 #word_count
