@@ -6,6 +6,20 @@
   # counts how many times each character appears in a string
   # ignores case
   # returns the hash
+def character_count string
+  count = {}
+  norm = string.downcase
+  norm.each_char do |i|
+    if count[i].nil?
+      count[i] = 1
+    else
+      count[i] += 1
+    end
+  end
+  count
+end
+
+
 
 ## STRETCH ##
 #word_count

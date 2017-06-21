@@ -6,6 +6,15 @@
   # counts the spaces in a string
   # returns number of spaces
 
+def count_spaces string1
+  ayeRay = string1.split(' ')
+  if ayeRay.length = 1
+    return 0
+  else
+    return ayeRay.length - 1
+  end
+end
+
 #string_lengths
   # takes in an array of strings
   # returns an array containing the lengths of the strings
