@@ -8,7 +8,7 @@
   # returns the hash
 #https://stackoverflow.com/questions/16124735/letter-count-in-a-sentence-using-ruby
   def character_count character
-    character.scan(/\w/).inject(Hash.new(0)){|h, c| h[c] += 1; h}
+    character.downcase.scan(/\w/i).inject(Hash.new(0)){|h, c| h[c] += 1; h}
   end
 
 ## STRETCH ##
@@ -18,6 +18,11 @@
   # ignores case
   # ignores characters that are not in the sequence a-z
   # returns a hash with all the words and their counts
+
+  #https://stackoverflow.com/questions/9480852/array-to-hash-words-count
+  def word_count word
+    word.downcase.split.inject(Hash.new(0)) { |h,v| h[v] += 1; h }
+  end
 
 ## STRETCH ##
 #most_frequent_word

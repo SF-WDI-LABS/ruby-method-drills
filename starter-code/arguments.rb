@@ -37,6 +37,6 @@
   # complains when given non-keyword arguments
   # Hint: google ruby keyword arguments
 
-  def find_answer
-
+  def find_answer (args={})
+    args[:answer]
   end

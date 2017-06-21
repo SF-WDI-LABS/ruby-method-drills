@@ -68,6 +68,11 @@
   # ignores case
   # returns true or false
 
+  def palindrome_word? str
+    ignore_case = str.downcase
+    ignore_case == ignore_case.reverse
+  end
+
 
 ## SUPER STRETCH ##
 #palindrome_sentence?
@@ -81,6 +86,9 @@
   # determines whether the character is a vowel
   # ignores case
   # handles weird inputs gracefully
+  def is_vowel ch
+    "aeiouAEIOU".include?(ch)
+  end
 
 #add_period
   # takes in a string

@@ -36,7 +36,7 @@
   # returns the updated list
 
   def remove_falsy_values values
-    values && True
+    values.select { |thing| !!thing }
 
   end
 
@@ -62,8 +62,8 @@
   # returns a new string - does not alter the original input (non-destructive)
   def exclude_first str_arr
     if str_arr.is_a?(Array)
-      str_arr.shift
-      return str_arr
+      # str_arr.shift
+      return str_arr[1..-1]
     end
     if str_arr.is_a?(String)
       return str_arr[1..-1]
@@ -116,19 +116,19 @@
   # takes in an array
   # returns a list of items at an index evenly divisible by n
   # defaults to an n value of 1
-  def select_every_n arr, *n
-    if n == nil || ""
-      n = 1
-    end
-      i = 0
-      n_arr = []
-    while i < arr.length
-        if i % n == 0
-          n_arr << arr[i]
-        end
-        i++
-      n_arr
-    end
+  # def select_every_n arr, n=1
+  #     i = 1
+  #     n_arr = []
+  #   while i < arr.length
+  #       if n % i == 0
+  #         n_arr << arr[i]
+  #       end
+  #       i++
+  #   end
+  #   n_arr
+  # end
+  def select_every_n(list, interval=1)
+    list.select.with_index {|item, index| item if index%interval == 0 }
   end
 
 ## STRETCH ##
