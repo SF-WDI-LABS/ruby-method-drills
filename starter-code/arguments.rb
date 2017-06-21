@@ -20,12 +20,15 @@ end
   # and adds heel height to his base 67 inches for the result
 def eddie_izzards_height (heel_height = 0)
   67 + heel_height
-end  
+end
 
 #how_many_args
   # accepts any number of arguments without complaint
   # returns the total number of arguments passed to the function
   # Hint: google ruby *args
+def how_many_args(*args)
+  args.count
+end
 
 #find_answer
   # returns the value associated with the 'answer' keyword argument
