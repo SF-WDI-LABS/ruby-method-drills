@@ -19,7 +19,8 @@
   # takes in an array of strings
   # returns an array containing the lengths of the strings
   def string_lengths(arr)
-    arr
+    newarr = arr.map
+    newarr.length
   end
 
 #remove_falsy_values
