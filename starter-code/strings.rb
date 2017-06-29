@@ -32,13 +32,13 @@
 #spell_out
   # takes in a string
   # converts the string to lowercase
-  # returns the input string, with characters seperated by dashes
+  # returns the input string, with characters separated by dashes
 
 
-#seperate
+#separate
   # takes in a string
-  # seperates characters with a custom seperator, when supplied with one
-  # seperates characters with dashes (by default)
+  # separates characters with a custom seperator, when supplied with one
+  # separates characters with dashes (by default)
   # returns the modified string
 
 ## STRETCH ##

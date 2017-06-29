@@ -27,7 +27,7 @@ def spell_out(word)
   word.downcase.split("").join("-")
 end
 
-def seperate(word, seperator="-")
+def separate(word, seperator="-")
   word.downcase.split("").join(seperator)
 end
 
