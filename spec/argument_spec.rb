@@ -42,6 +42,7 @@ describe "#how_many_args" do
   end
 
   it "returns the total number of arguments passed to the function" do
+    expect( how_many_args() ).to eq 0
     expect( how_many_args(1) ).to eq 1
     expect( how_many_args(1,1,1) ).to eq 3
     expect( how_many_args("",{},4,nil) ).to eq 4
