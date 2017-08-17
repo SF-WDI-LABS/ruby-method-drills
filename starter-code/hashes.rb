@@ -7,6 +7,23 @@
   # ignores case
   # returns the hash
 
+def character_count(stringthing)
+  letter_count = {}
+  last_char = nil
+  char_one_two_three = 0
+  stringthing.each_char do |char|
+  char = char.downcase
+    if char != last_char
+      char_one_two_three = 1
+    else
+      char_one_two_three += 1
+    end
+    last_char = char
+    letter_count[char] = char_one_two_three if (letter_count[char]||0) < char_one_two_three
+  end
+letter_count
+end
+
 ## STRETCH ##
 #word_count
   # takes in a string
